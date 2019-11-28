@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hexo</title>
+  <title>Person Page</title>
   
   
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://fei0511.github.io/"/>
-  <updated>2019-11-28T03:16:47.327Z</updated>
+  <updated>2019-11-28T03:23:24.781Z</updated>
   <id>http://fei0511.github.io/</id>
   
   <author>
-    <name>John Doe</name>
+    <name>fei</name>
     
   </author>
   
@@ -20,8 +20,8 @@
     <title>搭建个人网站</title>
     <link href="http://fei0511.github.io/2019/11/28/da-jian-ge-ren-wang-zhan/"/>
     <id>http://fei0511.github.io/2019/11/28/da-jian-ge-ren-wang-zhan/</id>
-    <published>2019-11-28T03:16:27.000Z</published>
-    <updated>2019-11-28T03:16:47.327Z</updated>
+    <published>2019-11-28T03:23:12.000Z</published>
+    <updated>2019-11-28T03:23:24.781Z</updated>
     
     <summary type="html">
     
@@ -29,8 +29,7 @@
       
         
         
-          &lt;hr&gt;
-&lt;p&gt;1.搭建GitHub免费个人网站（详细教程&lt;/p&gt;
+          &lt;p&gt;1.搭建GitHub免费个人网站（详细教程&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/qq_43270074/article/details/95392429&quot; target=&quot;_blank&quot;
         
       
