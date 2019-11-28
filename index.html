@@ -229,7 +229,7 @@
         
         <li><div class="divider"></div></li>
         <li>
-            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+            <a href="https://github.com/fei0511/fei0511" class="waves-effect waves-light" target="_blank">
                 <i class="fab fa-github-square fa-fw"></i>Fork Me
             </a>
         </li>
@@ -285,7 +285,7 @@
     }
 </style>
 
-<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+<a href="https://github.com/fei0511/fei0511" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
    data-tooltip="Fork Me" data-position="left" data-delay="50">
     <svg viewBox="0 0 250 250" aria-hidden="true">
         <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
@@ -365,7 +365,7 @@
                 <script>
                     var typed = new Typed("#subtitle", {
                         strings: ['从来没有真正的绝境, 只有心灵的迷途','Never really desperate, only the lost of the soul'],
-                        startDelay: 300,
+                        startDelay: 500,
                         typeSpeed: 100,
                         loop: true,
                         backSpeed: 50,
@@ -501,6 +501,41 @@
                     
 
                     
+                        
+
+<link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<div class="music-player">
+    
+    <div class="title center-align">
+        <i class="fas fa-music"></i>&nbsp;&nbsp;听听音乐
+    </div>
+    
+    <div class="row">
+        <div class="col l8 offset-l2 m10 offset-m1 s12">
+            <div id="aplayer" class="music"></div>
+        </div>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script>
+$(function () {
+    new APlayer({
+        container: document.getElementById('aplayer'),
+        fixed: 'false' === 'true',
+        autoplay: 'false' === 'true',
+        theme: '#42b983',
+        loop: 'all',
+        order: 'list',
+        preload: 'auto',
+        volume: Number('0.7'),
+        listFolded: 'false' === 'true',
+        listMaxHeight: '',
+        audio: eval([{"name":"一百万个可能","artist":"Christine Welch","url":"https://music.163.com/#/song?id=29722582","cover":"http://xxx.com/music-cover1.png"},{"name":"Take me hand","artist":"DAISHI DANCE,Cecile Corbel","url":"/medias/music/music2.mp3","cover":"/medias/music/cover2.png"},{"name":"Shape of You","artist":"J.Fla","url":"http://xxx.com/music3.mp3","cover":"http://xxx.com/music-cover3.png"}])
+    });
+});
+</script>
+                    
 
                     
 
@@ -521,6 +556,43 @@
     <!-- 所有文章卡片 -->
     <article id="articles" class="container articles">
         <div class="row article-row">
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2019/11/28/gei-wang-zhan-tian-jia-yin-le/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="给网站添加音乐">
+                            
+                            <span class="card-title">给网站添加音乐</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                给网站添加音乐1.首先解决生成外链问题1.网易云音乐歌单因为版权原因无法生成外链的解决方法（亲测有效）
+https://www.shknn.com/music-163-gedan.html
+
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-28
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-user fa-fw"></i>
+                                fei
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
@@ -613,6 +685,9 @@ https://b
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
             
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">297</span>&nbsp;字
+            
             
             
             
@@ -643,7 +718,7 @@ https://b
                     var today = new Date();
                     var startYear = "2019";
                     var startMonth = "11";
-                    var startDate = "28";
+                    var startDate = "27";
                     var startHour = "0";
                     var startMinute = "0";
                     var startSecond = "0";
