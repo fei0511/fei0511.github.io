@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>给用hexo写的博客添加评论功能</title>
+      <link href="/2019/12/02/gei-yong-hexo-xie-de-bo-ke-tian-jia-ping-lun-gong-neng/"/>
+      <url>/2019/12/02/gei-yong-hexo-xie-de-bo-ke-tian-jia-ping-lun-gong-neng/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>1.Hexo搭建的个人博客配置评论系统：Valine</p><p><a href="https://www.jianshu.com/p/59a5935c4248" target="_blank" rel="noopener">https://www.jianshu.com/p/59a5935c4248</a></p><p>2.Hexo 搭建：配置 Gitalk 评论系统</p><p><a href="https://blog.csdn.net/qq_36537546/article/details/90730412" target="_blank" rel="noopener">https://blog.csdn.net/qq_36537546/article/details/90730412</a></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 个人网站 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>stm32f103的各个串口使用方法</title>
       <link href="/2019/12/02/stm32f103-de-ge-ge-chuan-kou-shi-yong-fang-fa/"/>
       <url>/2019/12/02/stm32f103-de-ge-ge-chuan-kou-shi-yong-fang-fa/</url>
