@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://fei0511.github.io/"/>
-  <updated>2019-12-02T01:23:15.731Z</updated>
+  <updated>2019-12-02T01:40:37.523Z</updated>
   <id>http://fei0511.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>stm32f103的各个串口使用方法</title>
+    <link href="http://fei0511.github.io/2019/12/02/stm32f103-de-ge-ge-chuan-kou-shi-yong-fang-fa/"/>
+    <id>http://fei0511.github.io/2019/12/02/stm32f103-de-ge-ge-chuan-kou-shi-yong-fang-fa/</id>
+    <published>2019-12-02T01:30:40.000Z</published>
+    <updated>2019-12-02T01:40:37.523Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="割胶机器人" scheme="http://fei0511.github.io/tags/%E5%89%B2%E8%83%B6%E6%9C%BA%E5%99%A8%E4%BA%BA/"/>
+    
+  </entry>
   
   <entry>
     <title>设置树莓派为免密ssh登录</title>
@@ -46,7 +71,7 @@
     <link href="http://fei0511.github.io/2019/11/28/gei-wang-zhan-tian-jia-yin-le/"/>
     <id>http://fei0511.github.io/2019/11/28/gei-wang-zhan-tian-jia-yin-le/</id>
     <published>2019-11-28T09:03:38.000Z</published>
-    <updated>2019-12-02T01:20:44.867Z</updated>
+    <updated>2019-12-02T01:25:47.819Z</updated>
     
     <summary type="html">
     
@@ -61,6 +86,8 @@
     </summary>
     
     
+    
+      <category term="个人网站" scheme="http://fei0511.github.io/tags/%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/"/>
     
   </entry>
   
@@ -69,7 +96,7 @@
     <link href="http://fei0511.github.io/2019/11/28/da-jian-ge-ren-wang-zhan/"/>
     <id>http://fei0511.github.io/2019/11/28/da-jian-ge-ren-wang-zhan/</id>
     <published>2019-11-28T03:57:00.000Z</published>
-    <updated>2019-11-28T03:57:21.780Z</updated>
+    <updated>2019-12-02T01:25:18.978Z</updated>
     
     <summary type="html">
     
@@ -84,6 +111,8 @@
     </summary>
     
     
+    
+      <category term="个人网站" scheme="http://fei0511.github.io/tags/%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/"/>
     
   </entry>
   

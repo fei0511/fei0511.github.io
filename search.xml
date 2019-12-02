@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>stm32f103的各个串口使用方法</title>
+      <link href="/2019/12/02/stm32f103-de-ge-ge-chuan-kou-shi-yong-fang-fa/"/>
+      <url>/2019/12/02/stm32f103-de-ge-ge-chuan-kou-shi-yong-fang-fa/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="STM32F103的各个串口使用方法及注意事项"><a href="#STM32F103的各个串口使用方法及注意事项" class="headerlink" title="STM32F103的各个串口使用方法及注意事项"></a>STM32F103的各个串口使用方法及注意事项</h1><h2 id="1-详细使用方法"><a href="#1-详细使用方法" class="headerlink" title="1.详细使用方法"></a>1.详细使用方法</h2><p>STM32串口——5个串口的使用方法</p><p><a href="https://blog.csdn.net/qq_38351824/article/details/82777751" target="_blank" rel="noopener">https://blog.csdn.net/qq_38351824/article/details/82777751</a></p><h2 id="2-注意事项"><a href="#2-注意事项" class="headerlink" title="2.注意事项"></a>2.注意事项</h2><p>1.UASART1的所用的串口时钟是APB2（最快为72MHZ），而UASART2~5的所用的串口时钟是APB1（最快为36MHZ）；</p><p>2.STM32F103系列单片机共有5个串口，其中1-3是通用同步/异步串行接口USART(Universal Synchronous/Asynchronous Receiver/Transmitter)，4,、5是通用异步串行接口UART(Universal Asynchronous Receiver/Transmitter)。</p><p>3.在使用UASART时，如果不能正常使用，要查看串口收发的引脚是否和电阻相连。</p><p>4.在进行发送数据时，如果数据中存在0x00,需要想办法将它转换为其他格式的数据进行发送（如0x01,保证不和正确的数据冲突即可）。因为，在发送数据中，如果是0x00，相当于’\0’,串口默认该帧数据已发送结束。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 割胶机器人 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>设置树莓派为免密ssh登录</title>
       <link href="/2019/12/02/she-zhi-shu-mei-pai-wei-mian-mi-ssh-deng-lu/"/>
       <url>/2019/12/02/she-zhi-shu-mei-pai-wei-mian-mi-ssh-deng-lu/</url>
@@ -31,6 +50,12 @@
       
       
       
+        <tags>
+            
+            <tag> 个人网站 </tag>
+            
+        </tags>
+      
     </entry>
     
     
@@ -43,6 +68,12 @@
         <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>1.搭建GitHub免费个人网站（详细教程</p><p><a href="https://blog.csdn.net/qq_43270074/article/details/95392429" target="_blank" rel="noopener">https://blog.csdn.net/qq_43270074/article/details/95392429</a></p><p>2.手把手教你用Hexo+Github 搭建属于自己的博客</p><p><a href="https://blog.csdn.net/gdutxiaoxu/article/details/53576018" target="_blank" rel="noopener">https://blog.csdn.net/gdutxiaoxu/article/details/53576018</a></p><p>3.利用Github Page 搭建个人博客网站</p><p><a href="https://blog.csdn.net/tzs_1041218129/article/details/53214497" target="_blank" rel="noopener">https://blog.csdn.net/tzs_1041218129/article/details/53214497</a></p><p>4.手把手教你如何在GitHub上搭建属于自己的免费网站</p><p><a href="https://blog.csdn.net/weixin_40845165/article/details/78976206" target="_blank" rel="noopener">https://blog.csdn.net/weixin_40845165/article/details/78976206</a></p><p>5.如何利用GitHub设计一个炫酷的个人网站（含代码）</p><p><a href="https://blog.csdn.net/weixin_34210740/article/details/93334660" target="_blank" rel="noopener">https://blog.csdn.net/weixin_34210740/article/details/93334660</a></p><p>6.这是一个采用<code>Material Design</code>和响应式设计的 Hexo 博客主题。</p><p><a href="https://blinkfox.github.io/2018/09/28/qian-duan/hexo-bo-ke-zhu-ti-zhi-hexo-theme-matery-de-jie-shao/" target="_blank" rel="noopener">https://blinkfox.github.io/2018/09/28/qian-duan/hexo-bo-ke-zhu-ti-zhi-hexo-theme-matery-de-jie-shao/</a></p>]]></content>
       
       
+      
+        <tags>
+            
+            <tag> 个人网站 </tag>
+            
+        </tags>
       
     </entry>
     
