@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://fei0511.github.io/"/>
-  <updated>2019-11-28T13:18:05.237Z</updated>
+  <updated>2019-12-02T01:23:15.731Z</updated>
   <id>http://fei0511.github.io/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>设置树莓派为免密ssh登录</title>
+    <link href="http://fei0511.github.io/2019/12/02/she-zhi-shu-mei-pai-wei-mian-mi-ssh-deng-lu/"/>
+    <id>http://fei0511.github.io/2019/12/02/she-zhi-shu-mei-pai-wei-mian-mi-ssh-deng-lu/</id>
+    <published>2019-12-02T01:21:35.000Z</published>
+    <updated>2019-12-02T01:23:15.731Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="割胶机器人" scheme="http://fei0511.github.io/tags/%E5%89%B2%E8%83%B6%E6%9C%BA%E5%99%A8%E4%BA%BA/"/>
+    
+  </entry>
+  
+  <entry>
     <title>给网站添加音乐</title>
     <link href="http://fei0511.github.io/2019/11/28/gei-wang-zhan-tian-jia-yin-le/"/>
     <id>http://fei0511.github.io/2019/11/28/gei-wang-zhan-tian-jia-yin-le/</id>
     <published>2019-11-28T09:03:38.000Z</published>
-    <updated>2019-11-28T13:18:05.237Z</updated>
+    <updated>2019-12-02T01:20:44.867Z</updated>
     
     <summary type="html">
     

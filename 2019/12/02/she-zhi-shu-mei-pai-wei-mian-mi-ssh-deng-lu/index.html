@@ -4,8 +4,10 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, yunfei">
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex">
+    <meta name="keywords" content="设置树莓派为免密ssh登录, yunfei">
+    <meta name="description" content="1.SSH使用密钥免密码登录原文链接：SSH使用密钥免密码登录
+使用ssh远程连接服务器，有两种身份校验方式：账号密码和秘钥。使用秘钥的方式理论上更加安全，而且免去了输入密码的步骤，使用起来更方便（尤其对于sftp,scp等）。
+设置 SS">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +15,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Hello World | yunfei</title>
+    <title>设置树莓派为免密ssh登录 | yunfei</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -304,13 +306,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        Hello World
+                        设置树莓派为免密ssh登录
                     </div>
                 </div>
             </div>
@@ -420,9 +422,13 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E5%89%B2%E8%83%B6%E6%9C%BA%E5%99%A8%E4%BA%BA/">
+                                <span class="chip bg-color">割胶机器人</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -434,28 +440,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-11-27
+                    2019-12-02
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2019-11-27
+                    2019-12-02
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    73
+                    757
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 				
@@ -471,15 +477,40 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span></code></pre>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server</code></pre>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate</code></pre>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy</code></pre>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+                <h1 id="1-SSH使用密钥免密码登录"><a href="#1-SSH使用密钥免密码登录" class="headerlink" title="1.SSH使用密钥免密码登录"></a>1.<a href="https://www.cnblogs.com/wangshuyi/p/6664799.html" target="_blank" rel="noopener">SSH使用密钥免密码登录</a></h1><p>原文链接：<a href="https://www.cnblogs.com/wangshuyi/p/6664799.html" target="_blank" rel="noopener">SSH使用密钥免密码登录</a></p>
+<p>使用ssh远程连接服务器，有两种身份校验方式：账号密码和秘钥。使用秘钥的方式理论上更加安全，而且免去了输入密码的步骤，使用起来更方便（尤其对于sftp,scp等）。</p>
+<h3 id="设置-SSH，打开密钥登录功能"><a href="#设置-SSH，打开密钥登录功能" class="headerlink" title="设置 SSH，打开密钥登录功能"></a>设置 SSH，打开密钥登录功能</h3><p>编辑 /etc/ssh/sshd_config 文件，进行如下设置：</p>
+<pre><code>RSAAuthentication yes
+PubkeyAuthentication yes</code></pre><p>留意 root 用户能否通过 SSH 登录：</p>
+<pre><code>PermitRootLogin yes</code></pre><p>当你完成全部设置，并以密钥方式登录成功后，再禁用密码登录：</p>
+<pre><code>PasswordAuthentication no</code></pre><p>最后，重启 SSH 服务：</p>
+<pre><code>[root@host .ssh]$ service sshd restart</code></pre><ol>
+<li><p>秘钥由谁生成<br>这是比较容易搞乱的一点。这里以A、B两台服务器为例，假设A需要ssh登录B，那么应该由那台服务器生成秘钥呢。可能有人以为像门锁一样，主人家负责装锁配钥匙，把钥匙交给要开门的人使用，所以由被访问的B服务器生成秘钥。</p>
+<p>事实恰恰相反，秘钥由访问请求方A服务器生成，并把生成的公钥交给B导入；公钥可以在多台服务器导入，一台服务器导入了A的公钥，即意味着承认A的有访问自己权限，所以A可以用一套密钥登录多台服务器。</p>
+</li>
+</ol>
+<ol start="2">
+<li>账号<br>访问和被访问的服务，需要有相同的账号，而且密钥由该账号生成。</li>
+</ol>
+<ol start="3">
+<li>密钥生成<br>在A服务器上执行命令：<br><strong>ssh-keygen -t [rsa|dsa]</strong><br>rsa和dsa是生成密钥常用的两种加密算法，其他可选算法还有ecdsa、rsa1等。<br>命令执行过程需要用户输入的地方连续回车即可（enter passphrase的别输入，否则登录的时候还是得输入密钥密码）。<br>执行成功后，在用户home目录下的.ssh子目录里会生成私钥文件和公钥文件：id_rsa,id_rsa.pub或id_dsa,id_dsa.pub。</li>
+</ol>
+<ol start="4">
+<li><p>公钥导入<br><strong>方法一：</strong><br>把公钥文件id_rsa.pub上传到B服务器，然后执行：<br><strong>cat id_rsa.pub &gt;&gt; ~/.ssh/authorized_keys</strong><br>将id_rsa.pub的内容，追加到文件~/.ssh/authorized_keys中</p>
+<p><strong>方法二：</strong>在A服务器上使用命令cat <del>/.ssh/id_rsa.pub查看公钥内容，将内容复制<strong>追加</strong>到B服务器的文件</del>/.ssh/authorized_keys中（请注意不要删除或覆盖该文件中已有的内容）。</p>
+</li>
+</ol>
+<ol start="5">
+<li><p>修改权限<br>A服务器上的.ssh和秘钥文件的权限在ssh-keygen生成时已设好，无须特别设置。B服务器上如果是首次添加authorized_keys，需要修改权限：<br><strong>chmod 600 authorized_keys</strong><br>设置authorized_keys权限</p>
+<p><strong>chmod 700 -R .ssh</strong><br>设置.ssh目录权限</p>
+</li>
+</ol>
+<ol start="6">
+<li><p>登录<br>在A服务器上执行：<br><strong>ssh-add /id_rsa</strong><br>必须保证id_rsa文件的权限为600<br>ssh ip/hostname（B服务器的ip或主机名）<br>即可登录。</p>
+</li>
+<li><p>问题Could not open a connection to your authentication agent<br>先执行  eval <code>ssh-agent</code>  （是～键上的那个`） 再执行 ssh-add ~/.ssh/rsa成功</p>
+</li>
+</ol>
 
             </div>
             <hr/>
@@ -505,7 +536,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://fei0511.github.io/2019/11/27/hello-world/">http://fei0511.github.io/2019/11/27/hello-world/</a>
+                    <a href="http://fei0511.github.io/2019/12/02/she-zhi-shu-mei-pai-wei-mian-mi-ssh-deng-lu/">http://fei0511.github.io/2019/12/02/she-zhi-shu-mei-pai-wei-mian-mi-ssh-deng-lu/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -542,7 +573,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/%E5%89%B2%E8%83%B6%E6%9C%BA%E5%99%A8%E4%BA%BA/">
+                                    <span class="chip bg-color">割胶机器人</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -706,68 +741,31 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2019/11/28/da-jian-ge-ren-wang-zhan/">
+                <a href="/2019/12/02/she-zhi-shu-mei-pai-wei-mian-mi-ssh-deng-lu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="搭建个人网站">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="设置树莓派为免密ssh登录">
                         
-                        <span class="card-title">搭建个人网站</span>
+                        <span class="card-title">设置树莓派为免密ssh登录</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            1.搭建GitHub免费个人网站（详细教程
-https://blog.csdn.net/qq_43270074/article/details/95392429
-2.手把手教你用Hexo+Github 搭建属于自己的博客
-https://b
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2019-11-28
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            fei
-                            
-                        </span>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/2019/11/27/hello-world/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
-                        
-                        <span class="card-title">Hello World</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex
+                            1.SSH使用密钥免密码登录原文链接：SSH使用密钥免密码登录
+使用ssh远程连接服务器，有两种身份校验方式：账号密码和秘钥。使用秘钥的方式理论上更加安全，而且免去了输入密码的步骤，使用起来更方便（尤其对于sftp,scp等）。
+设置 SS
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-27
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-12-02
                             </span>
                         <span class="publish-author">
                             
@@ -778,6 +776,54 @@ https://b
                     </div>
                 </div>
 
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%89%B2%E8%83%B6%E6%9C%BA%E5%99%A8%E4%BA%BA/">
+                        <span class="chip bg-color">割胶机器人</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2019/11/28/gei-wang-zhan-tian-jia-yin-le/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="给网站添加音乐">
+                        
+                        <span class="card-title">给网站添加音乐</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            给网站添加音乐1.首先解决生成外链问题1.网易云音乐歌单因为版权原因无法生成外链的解决方法（亲测有效）
+https://www.shknn.com/music-163-gedan.html
+
+2.求免费稳定的，能将音乐上传后生成MP3后缀结
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-28
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            fei
+                            
+                        </span>
+                    </div>
+                </div>
                 
             </div>
         </div>
