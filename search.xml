@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>通过hexo搭建的博客上传文件和超链接</title>
+      <link href="/2019/12/04/tong-guo-hexo-da-jian-de-bo-ke-shang-chuan-wen-jian-he-chao-lian-jie/"/>
+      <url>/2019/12/04/tong-guo-hexo-da-jian-de-bo-ke-shang-chuan-wen-jian-he-chao-lian-jie/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="1-Hexo搭建的博客中上传文件"><a href="#1-Hexo搭建的博客中上传文件" class="headerlink" title="1.Hexo搭建的博客中上传文件"></a>1.Hexo搭建的博客中上传文件</h2><p>原文链接：<a href="https://www.zhihu.com/question/266964671" target="_blank" rel="noopener">https://www.zhihu.com/question/266964671</a></p><h2 id="2-廖雪峰教程"><a href="#2-廖雪峰教程" class="headerlink" title="2.廖雪峰教程"></a>2.廖雪峰教程</h2><p><a href="https://www.liaoxuefeng.com/wiki/896043488029600" target="_blank" rel="noopener">https://www.liaoxuefeng.com/wiki/896043488029600</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> markdown使用 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 个人网站 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>给用hexo写的博客添加评论功能</title>
       <link href="/2019/12/02/gei-yong-hexo-xie-de-bo-ke-tian-jia-ping-lun-gong-neng/"/>
       <url>/2019/12/02/gei-yong-hexo-xie-de-bo-ke-tian-jia-ping-lun-gong-neng/</url>
