@@ -124,17 +124,17 @@
     
     
     <entry>
-      <title>给网站添加音乐</title>
-      <link href="/2019/11/28/gei-wang-zhan-tian-jia-yin-le/"/>
-      <url>/2019/11/28/gei-wang-zhan-tian-jia-yin-le/</url>
+      <title>给网站添加音乐和图片</title>
+      <link href="/2019/11/28/gei-wang-zhan-tian-jia-yin-le-he-tu-pian/"/>
+      <url>/2019/11/28/gei-wang-zhan-tian-jia-yin-le-he-tu-pian/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="给网站添加音乐"><a href="#给网站添加音乐" class="headerlink" title="给网站添加音乐"></a>给网站添加音乐</h1><h2 id="1-首先解决生成外链问题"><a href="#1-首先解决生成外链问题" class="headerlink" title="1.首先解决生成外链问题"></a>1.首先解决生成外链问题</h2><p>1.网易云音乐歌单因为版权原因无法生成外链的解决方法（亲测有效）</p><p><a href="https://www.shknn.com/music-163-gedan.html" target="_blank" rel="noopener">https://www.shknn.com/music-163-gedan.html</a></p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1376535517&auto=1&height=66"></iframe>2.求免费稳定的，能将音乐上传后生成MP3后缀结尾的地址<p><a href="https://zhidao.baidu.com/question/534204307.html?fr=iks&amp;word=%BA%F3%D7%BA%CE%AA.mp3%B5%C4%CD%F8%D6%B7%CA%C7%D4%F5%C3%B4%C9%FA%B3%C9%B5%C4&amp;ie=gbk" target="_blank" rel="noopener">https://zhidao.baidu.com/question/534204307.html?fr=iks&amp;word=%BA%F3%D7%BA%CE%AA.mp3%B5%C4%CD%F8%D6%B7%CA%C7%D4%F5%C3%B4%C9%FA%B3%C9%B5%C4&amp;ie=gbk</a></p><p>将音乐首先下载到电脑上，然后上传到qq邮箱的文件中转站；之后用IE浏览器进行下载；最后在地址栏复制.mp3之前的地址。</p><p>3.MP3外链获取网站</p><p><a href="http://www.333ttt.com/" target="_blank" rel="noopener">http://www.333ttt.com</a></p>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="给网站添加音乐和图片"><a href="#给网站添加音乐和图片" class="headerlink" title="给网站添加音乐和图片"></a>给网站添加音乐和图片</h1><h2 id="1-音乐外链生成网站"><a href="#1-音乐外链生成网站" class="headerlink" title="1.音乐外链生成网站"></a>1.音乐外链生成网站</h2><p> <a href="http://www.333ttt.com/up/" target="_blank" rel="noopener">http://www.333ttt.com/up/</a> </p><p>在该网站搜索需要的音乐或者歌手，最网页最下方就可以获得该歌曲的外链接。最后在Hexo/_data文件夹下的music.json文件中加入该外链接即可。</p><h2 id="2-图片外链生成网站"><a href="#2-图片外链生成网站" class="headerlink" title="2.图片外链生成网站"></a>2.图片外链生成网站</h2><p> <a href="https://sm.ms/" target="_blank" rel="noopener">https://sm.ms/</a> </p><p>直接在该网站上上传需要的照片，就可以获得该图片的外链接了。</p>]]></content>
       
       
       
         <tags>
             
-            <tag> 个人网站 </tag>
+            <tag> 网站 </tag>
             
         </tags>
       
