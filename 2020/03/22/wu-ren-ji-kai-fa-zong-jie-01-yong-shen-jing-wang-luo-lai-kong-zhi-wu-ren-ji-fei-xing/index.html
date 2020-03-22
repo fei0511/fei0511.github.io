@@ -4,9 +4,10 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="【割胶机器人-开发总结02】- 设置树莓派为免密ssh登录, yunfei">
-    <meta name="description" content="【割胶机器人-开发总结02】- 设置树莓派为免密ssh登录1.SSH使用密钥免密码登录原文链接：SSH使用密钥免密码登录
-使用ssh远程连接服务器，有两种身份校验方式：账号密码和秘钥。使用秘钥的方式理论上更加安全，而且免去了输入密码的步骤，">
+    <meta name="keywords" content="[无人机-开发总结01]-用神经网络来控制无人机飞行, yunfei">
+    <meta name="description" content="[无人机-开发总结01]-用神经网络来控制无人机飞行用训练好的神经网络模型来控制无人机飞行1.  搭建飞控网络1.1   确定网络的输入与输出数据网络输入数据：
+维度：9维
+位置误差pos_err.x, pos_err.y, pos_err">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,7 +15,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>【割胶机器人-开发总结02】- 设置树莓派为免密ssh登录 | yunfei</title>
+    <title>[无人机-开发总结01]-用神经网络来控制无人机飞行 | yunfei</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -283,13 +284,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        【割胶机器人-开发总结02】- 设置树莓派为免密ssh登录
+                        [无人机-开发总结01]-用神经网络来控制无人机飞行
                     </div>
                 </div>
             </div>
@@ -401,8 +402,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E5%89%B2%E8%83%B6%E6%9C%BA%E5%99%A8%E4%BA%BA/">
-                                <span class="chip bg-color">割胶机器人</span>
+                            <a href="/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA%E5%BC%80%E5%8F%91/">
+                                <span class="chip bg-color">无人机开发</span>
                             </a>
                         
                     </div>
@@ -426,7 +427,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-12-02
+                    2020-03-22
                 </div>
                 
 
@@ -440,14 +441,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    777
+                    1.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    3 分
                 </div>
                 
 				
@@ -463,40 +464,35 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="【割胶机器人-开发总结02】-设置树莓派为免密ssh登录"><a href="#【割胶机器人-开发总结02】-设置树莓派为免密ssh登录" class="headerlink" title="【割胶机器人-开发总结02】- 设置树莓派为免密ssh登录"></a>【割胶机器人-开发总结02】- 设置树莓派为免密ssh登录</h1><h2 id="1-SSH使用密钥免密码登录"><a href="#1-SSH使用密钥免密码登录" class="headerlink" title="1.SSH使用密钥免密码登录"></a>1.<a href="https://www.cnblogs.com/wangshuyi/p/6664799.html" target="_blank" rel="noopener">SSH使用密钥免密码登录</a></h2><p>原文链接：<a href="https://www.cnblogs.com/wangshuyi/p/6664799.html" target="_blank" rel="noopener">SSH使用密钥免密码登录</a></p>
-<p>使用ssh远程连接服务器，有两种身份校验方式：账号密码和秘钥。使用秘钥的方式理论上更加安全，而且免去了输入密码的步骤，使用起来更方便（尤其对于sftp,scp等）。</p>
-<h3 id="设置-SSH，打开密钥登录功能"><a href="#设置-SSH，打开密钥登录功能" class="headerlink" title="设置 SSH，打开密钥登录功能"></a>设置 SSH，打开密钥登录功能</h3><p>编辑 /etc/ssh/sshd_config 文件，进行如下设置：</p>
-<pre><code>RSAAuthentication yes
-PubkeyAuthentication yes</code></pre><p>留意 root 用户能否通过 SSH 登录：</p>
-<pre><code>PermitRootLogin yes</code></pre><p>当你完成全部设置，并以密钥方式登录成功后，再禁用密码登录：</p>
-<pre><code>PasswordAuthentication no</code></pre><p>最后，重启 SSH 服务：</p>
-<pre><code>[root@host .ssh]$ service sshd restart</code></pre><ol>
-<li><p>秘钥由谁生成<br>这是比较容易搞乱的一点。这里以A、B两台服务器为例，假设A需要ssh登录B，那么应该由那台服务器生成秘钥呢。可能有人以为像门锁一样，主人家负责装锁配钥匙，把钥匙交给要开门的人使用，所以由被访问的B服务器生成秘钥。</p>
-<p>事实恰恰相反，秘钥由访问请求方A服务器生成，并把生成的公钥交给B导入；公钥可以在多台服务器导入，一台服务器导入了A的公钥，即意味着承认A的有访问自己权限，所以A可以用一套密钥登录多台服务器。</p>
-</li>
-</ol>
-<ol start="2">
-<li>账号<br>访问和被访问的服务，需要有相同的账号，而且密钥由该账号生成。</li>
-</ol>
-<ol start="3">
-<li>密钥生成<br>在A服务器上执行命令：<br><strong>ssh-keygen -t [rsa|dsa]</strong><br>rsa和dsa是生成密钥常用的两种加密算法，其他可选算法还有ecdsa、rsa1等。<br>命令执行过程需要用户输入的地方连续回车即可（enter passphrase的别输入，否则登录的时候还是得输入密钥密码）。<br>执行成功后，在用户home目录下的.ssh子目录里会生成私钥文件和公钥文件：id_rsa,id_rsa.pub或id_dsa,id_dsa.pub。</li>
-</ol>
-<ol start="4">
-<li><p>公钥导入<br><strong>方法一：</strong><br>把公钥文件id_rsa.pub上传到B服务器，然后执行：<br><strong>cat id_rsa.pub &gt;&gt; ~/.ssh/authorized_keys</strong><br>将id_rsa.pub的内容，追加到文件~/.ssh/authorized_keys中</p>
-<p><strong>方法二：</strong>在A服务器上使用命令cat <del>/.ssh/id_rsa.pub查看公钥内容，将内容复制<strong>追加</strong>到B服务器的文件</del>/.ssh/authorized_keys中（请注意不要删除或覆盖该文件中已有的内容）。</p>
-</li>
-</ol>
-<ol start="5">
-<li><p>修改权限<br>A服务器上的.ssh和秘钥文件的权限在ssh-keygen生成时已设好，无须特别设置。B服务器上如果是首次添加authorized_keys，需要修改权限：<br><strong>chmod 600 authorized_keys</strong><br>设置authorized_keys权限</p>
-<p><strong>chmod 700 -R .ssh</strong><br>设置.ssh目录权限</p>
-</li>
-</ol>
-<ol start="6">
-<li><p>登录<br>在A服务器上执行：<br><strong>ssh-add /id_rsa</strong><br>必须保证id_rsa文件的权限为600<br>ssh ip/hostname（B服务器的ip或主机名）<br>即可登录。</p>
-</li>
-<li><p>问题Could not open a connection to your authentication agent<br>先执行  eval <code>ssh-agent</code>  （是～键上的那个`） 再执行 ssh-add ~/.ssh/rsa成功</p>
-</li>
-</ol>
+                <h1 id="无人机-开发总结01-用神经网络来控制无人机飞行"><a href="#无人机-开发总结01-用神经网络来控制无人机飞行" class="headerlink" title="[无人机-开发总结01]-用神经网络来控制无人机飞行"></a>[无人机-开发总结01]-用神经网络来控制无人机飞行</h1><h2 id="用训练好的神经网络模型来控制无人机飞行"><a href="#用训练好的神经网络模型来控制无人机飞行" class="headerlink" title="用训练好的神经网络模型来控制无人机飞行"></a>用训练好的神经网络模型来控制无人机飞行</h2><h2 id="1-搭建飞控网络"><a href="#1-搭建飞控网络" class="headerlink" title="1.  搭建飞控网络"></a>1.  搭建飞控网络</h2><h3 id="1-1-确定网络的输入与输出数据"><a href="#1-1-确定网络的输入与输出数据" class="headerlink" title="1.1   确定网络的输入与输出数据"></a>1.1   确定网络的输入与输出数据</h3><p>网络输入数据：</p>
+<p>维度：9维</p>
+<p>位置误差pos_err.x, pos_err.y, pos_err.z</p>
+<p>速度误差vel_err.x, vel_err.y, vel_err.z</p>
+<p>欧拉角误差eluer_err.x, eluer_err.y, eluer_err.z</p>
+<p>网络输出数据：</p>
+<p>维度：4维</p>
+<p>四个电机的角速度rotor_0_vel, rotor_1_vel, rotor_2_vel, rotor_3_vel</p>
+<h3 id="1-2-搭建网络模型"><a href="#1-2-搭建网络模型" class="headerlink" title="1.2   搭建网络模型"></a>1.2   搭建网络模型</h3><p>​        在输入和输出数据类型确定完成后，考虑到输出数据有正有负，因此我们选择了tanh函数来作为我们的神经网络的激活函数。并选择了比较简单的六层全连接网络来作为我们的网络结构。将预测的电机速度与传统方法计算的电机速度求均方差，来检验网络的训练效果。选择了AdamOptimizer优化算法来训练网络模型。网络的结构图如图1-2所示。</p>
+<h3 id="1-3-训练网络模型"><a href="#1-3-训练网络模型" class="headerlink" title="1.3   训练网络模型"></a>1.3   训练网络模型</h3><h4 id="1-3-1本地训练网络模型"><a href="#1-3-1本地训练网络模型" class="headerlink" title="1.3.1本地训练网络模型"></a>1.3.1本地训练网络模型</h4><p>我们采集了多次数据集，来训练我们的网络模型。首先，我们在电脑上来训练我们的网络模型。如下图为我们的训练损失下降曲线。损失最终维持在100左右。</p>
+<p><img src="file:///C:/Users/12770/AppData/Local/Temp/msohtmlclip1/01/clip_image002.jpg" alt="img"></p>
+<p>​                                                                          图1-1 损失下降曲线</p>
+<h4 id="1-3-2服务器训练网络模型"><a href="#1-3-2服务器训练网络模型" class="headerlink" title="1.3.2服务器训练网络模型"></a>1.3.2服务器训练网络模型</h4><p>同时，我们又在服务器上进行了更长时间的训练，通过不断增加训练的次数，来不断提高网络模型的质量。最终，我们在仿真环境中选用的网络模型参数也是从服务器上训练好的模型参数。训练过程如图1-3所示。</p>
+<p><img src="pic%5C%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E7%BB%93%E6%9E%84.jpg" alt=""></p>
+<p>​                                                                                 图1-2 网络结构图</p>
+<p>​                                  <img src="pic%5C%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%AD%E7%BB%83%E8%BF%87%E7%A8%8B.gif" alt=""> </p>
+<p>​                                                                                图1-3 服务器训练过程</p>
+<h2 id="2-利用飞控网络模型控制无人机"><a href="#2-利用飞控网络模型控制无人机" class="headerlink" title="2.  利用飞控网络模型控制无人机"></a>2.  利用飞控网络模型控制无人机</h2><p>​         ROS与tensorflow的结合使用在古月的&lt;机器人制作&gt;一书中已经有所介绍,书中介绍部分是在ROS中通过调用opencv来识别物体,网友们也都是基于此开源项目展开研究的.</p>
+<p>​         此类项目与我们所研究的重合点在于同样是编写python脚本读取无人机的odom话题与trajectory 话题message,将数据提取并处理后在放入我们第一步训练过的网络计算出无人机控制量:四个电机角速度,这一向量返回发布到speed_control话题上,即需要重构原回调函数,计算rotor_velocities(4×1),最后将其发布到话题上,通过gazebo订阅控制无人机飞行.</p>
+<h3 id="2-1-编写ros-tensorflow接口"><a href="#2-1-编写ros-tensorflow接口" class="headerlink" title="2.1   编写ros_tensorflow接口"></a>2.1   编写ros_tensorflow接口</h3><p>​         根据思路复现的代码确实不可信，调崩了gazebo之后换新代码立马见效Rotors代码结构写的特别棒值得深入研究。</p>
+<p>​         首先需要使用python脚本读取ros运行时话题数据，在读取消息内容上耗费了一定时间，反复rostopic info深入理解消息类型定义后才成功读取。</p>
+<h3 id="2-2-调用网络模型进行预测"><a href="#2-2-调用网络模型进行预测" class="headerlink" title="2.2   调用网络模型进行预测"></a>2.2   调用网络模型进行预测</h3><p>  读取完ros结点odom与的数据接下来就是跑模型预测控制量，通过初始化自定义rosnode：rostensorflow发布/NEU_m100/motor_vel话题，数据类型使用自定义float64类型msgs。</p>
+<p>   rosrun脚本之后rostopic list确实发布了话题，rostopic echo /NEU_m100/moter_vel调用tensorflow模型出现了不少问题，这一过程确实耗费了不少时间,反复逐句调试后才成功跑通，至此ros与tensorflow脚本调用部分顺利接通.能够将仿真环境中采集到的传感器数值进行预处理后加载到tensorflow预训练模型输出四个电机转速控制量。</p>
+<h3 id="2-3-调试结果"><a href="#2-3-调试结果" class="headerlink" title="2.3   调试结果"></a>2.3   调试结果</h3><p>  在roscpp重新改写回调函数后成功发布电机转速控制,各话题数据均正常显示，飞机能够运动,到此全流程均已调试完成。</p>
+<p>&lt; img src=”/pic/神经网络结构.jpg”&gt;</p>
+<p>   <img src="file:///C:/Users/12770/AppData/Local/Temp/msohtmlclip1/01/clip_image008.gif" alt="img"></p>
+<p>​                                                                   图2-1 ROS运行节点计算图</p>
+<p><img src="file:///C:/Users/12770/AppData/Local/Temp/msohtmlclip1/01/clip_image010.jpg" alt="img"></p>
+<p>​                                                        图2-2 神经网络无人机模型飞行过程</p>
 
             </div>
             <hr/>
@@ -522,7 +518,7 @@ PubkeyAuthentication yes</code></pre><p>留意 root 用户能否通过 SSH 登�
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://fei0511.github.io/2019/12/02/she-zhi-shu-mei-pai-wei-mian-mi-ssh-deng-lu/">http://fei0511.github.io/2019/12/02/she-zhi-shu-mei-pai-wei-mian-mi-ssh-deng-lu/</a>
+                    <a href="http://fei0511.github.io/2020/03/22/wu-ren-ji-kai-fa-zong-jie-01-yong-shen-jing-wang-luo-lai-kong-zhi-wu-ren-ji-fei-xing/">http://fei0511.github.io/2020/03/22/wu-ren-ji-kai-fa-zong-jie-01-yong-shen-jing-wang-luo-lai-kong-zhi-wu-ren-ji-fei-xing/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -560,8 +556,8 @@ PubkeyAuthentication yes</code></pre><p>留意 root 用户能否通过 SSH 登�
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E5%89%B2%E8%83%B6%E6%9C%BA%E5%99%A8%E4%BA%BA/">
-                                    <span class="chip bg-color">割胶机器人</span>
+                                <a href="/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA%E5%BC%80%E5%8F%91/">
+                                    <span class="chip bg-color">无人机开发</span>
                                 </a>
                             
                         </div>
@@ -990,30 +986,32 @@ PubkeyAuthentication yes</code></pre><p>留意 root 用户能否通过 SSH 登�
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2019/12/02/stm32f103-de-ge-ge-chuan-kou-shi-yong-fang-fa/">
+                <a href="/2020/03/22/wu-ren-ji-kai-fa-zong-jie-01-yong-shen-jing-wang-luo-lai-kong-zhi-wu-ren-ji-fei-xing/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="【割胶机器人-开发总结01】- STM32F103串口使用">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="[无人机-开发总结01]-用神经网络来控制无人机飞行">
                         
-                        <span class="card-title">【割胶机器人-开发总结01】- STM32F103串口使用</span>
+                        <span class="card-title">[无人机-开发总结01]-用神经网络来控制无人机飞行</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            【割胶机器人-开发总结01】- STM32F103串口使用STM32F103的各个串口使用方法及注意事项1.详细使用方法STM32串口——5个串口的使用方法
-https://blog.csdn.net/qq_38351824/article
+                            [无人机-开发总结01]-用神经网络来控制无人机飞行用训练好的神经网络模型来控制无人机飞行1.  搭建飞控网络1.1   确定网络的输入与输出数据网络输入数据：
+维度：9维
+位置误差pos_err.x, pos_err.y, pos_err
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2019-12-02
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-22
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1026,11 +1024,12 @@ https://blog.csdn.net/qq_38351824/article
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%89%B2%E8%83%B6%E6%9C%BA%E5%99%A8%E4%BA%BA/">
-                        <span class="chip bg-color">割胶机器人</span>
+                    <a href="/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA%E5%BC%80%E5%8F%91/">
+                        <span class="chip bg-color">无人机开发</span>
                     </a>
                     
                 </div>
@@ -1044,25 +1043,25 @@ https://blog.csdn.net/qq_38351824/article
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/11/28/gei-wang-zhan-tian-jia-yin-le-he-tu-pian/">
+                <a href="/2020/01/26/ipad-suo-ping-mi-ma-wang-ji-hou-jie-jue-ban-fa/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="【经验分享04】- 给网站添加音乐和图片">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="【经验分享02】- 破解ipad锁屏密码">
                         
-                        <span class="card-title">【经验分享04】- 给网站添加音乐和图片</span>
+                        <span class="card-title">【经验分享02】- 破解ipad锁屏密码</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            【经验分享04】- 给网站添加音乐和图片1.音乐外链生成网站 http://www.333ttt.com/up/ 
-在该网站搜索需要的音乐或者歌手，最网页最下方就可以获得该歌曲的外链接。最后在Hexo/_data文件夹下的music.jso
+                            【经验分享02】- 破解ipad锁屏密码苹果iPad设置锁屏密码忘记了怎么处理一，苹果iPad设置锁屏密码忘记了，可以通过恢复系统来还原。
+二，具体操作方法：第一步：电脑登陆苹果官网下载itunes，安装完毕后打开。第二步：把 iPad用数
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-28
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-01-26
                             </span>
                         <span class="publish-author">
                             
@@ -1079,8 +1078,8 @@ https://blog.csdn.net/qq_38351824/article
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/">
-                        <span class="chip bg-color">个人网站</span>
+                    <a href="/tags/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/">
+                        <span class="chip bg-color">常见问题</span>
                     </a>
                     
                 </div>
