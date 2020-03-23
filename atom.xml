@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://fei0511.github.io/"/>
-  <updated>2020-03-23T14:38:42.817Z</updated>
+  <updated>2020-03-23T14:48:04.526Z</updated>
   <id>http://fei0511.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Matlab使用-课程学习-用遗传算法求解TSP问题</title>
+    <title>[Matlab使用-课程学习]-用遗传算法求解TSP问题</title>
     <link href="http://fei0511.github.io/2020/03/23/matlab-shi-yong-ke-cheng-xue-xi-yong-yi-chuan-suan-fa-qiu-jie-tsp-wen-ti/"/>
     <id>http://fei0511.github.io/2020/03/23/matlab-shi-yong-ke-cheng-xue-xi-yong-yi-chuan-suan-fa-qiu-jie-tsp-wen-ti/</id>
-    <published>2020-03-23T12:40:50.269Z</published>
-    <updated>2020-03-23T14:38:42.817Z</updated>
+    <published>2020-03-23T12:40:50.000Z</published>
+    <updated>2020-03-23T14:48:04.526Z</updated>
     
     <summary type="html">
     
@@ -36,6 +36,10 @@
     </summary>
     
     
+      <category term="课程学习" scheme="http://fei0511.github.io/categories/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="Matlab使用" scheme="http://fei0511.github.io/tags/Matlab%E4%BD%BF%E7%94%A8/"/>
     
   </entry>
   
