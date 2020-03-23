@@ -204,11 +204,11 @@
     
     
     <entry>
-      <title>【经验分享04】- 给网站添加音乐和图片</title>
+      <title>【经验分享04】- 给网站添加音乐、图片和视频</title>
       <link href="/2019/11/28/gei-wang-zhan-tian-jia-yin-le-he-tu-pian/"/>
       <url>/2019/11/28/gei-wang-zhan-tian-jia-yin-le-he-tu-pian/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="【经验分享04】-给网站添加音乐和图片"><a href="#【经验分享04】-给网站添加音乐和图片" class="headerlink" title="【经验分享04】- 给网站添加音乐和图片"></a>【经验分享04】- 给网站添加音乐和图片</h1><h2 id="1-音乐外链生成网站"><a href="#1-音乐外链生成网站" class="headerlink" title="1.音乐外链生成网站"></a>1.音乐外链生成网站</h2><p> <a href="http://www.333ttt.com/up/" target="_blank" rel="noopener">http://www.333ttt.com/up/</a> </p><p>在该网站搜索需要的音乐或者歌手，最网页最下方就可以获得该歌曲的外链接。最后在Hexo/_data文件夹下的music.json文件中加入该外链接即可。</p><h2 id="2-图片外链生成网站"><a href="#2-图片外链生成网站" class="headerlink" title="2.图片外链生成网站"></a>2.图片外链生成网站</h2><p> <a href="https://sm.ms/" target="_blank" rel="noopener">https://sm.ms/</a> </p><p> <a href="https://imgchr.com/" target="_blank" rel="noopener">https://imgchr.com/</a> (推荐使用)</p><p>直接在该网站上上传需要的照片，就可以获得该图片的外链接了。</p>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="【经验分享04】-给网站添加音乐、图片和视频"><a href="#【经验分享04】-给网站添加音乐、图片和视频" class="headerlink" title="【经验分享04】- 给网站添加音乐、图片和视频"></a>【经验分享04】- 给网站添加音乐、图片和视频</h1><h2 id="1-音乐外链生成网站"><a href="#1-音乐外链生成网站" class="headerlink" title="1.音乐外链生成网站"></a>1.音乐外链生成网站</h2><p> <a href="http://www.333ttt.com/up/" target="_blank" rel="noopener">http://www.333ttt.com/up/</a> </p><p>在该网站搜索需要的音乐或者歌手，最网页最下方就可以获得该歌曲的外链接。最后在Hexo/_data文件夹下的music.json文件中加入该外链接即可。</p><h2 id="2-图片外链生成网站"><a href="#2-图片外链生成网站" class="headerlink" title="2.图片外链生成网站"></a>2.图片外链生成网站</h2><p> <a href="https://sm.ms/" target="_blank" rel="noopener">https://sm.ms/</a> </p><p> <a href="https://imgchr.com/" target="_blank" rel="noopener">https://imgchr.com/</a> (推荐使用)</p><p>直接在该网站上上传需要的照片，就可以获得该图片的外链接了。</p><h2 id="3-插入视频"><a href="#3-插入视频" class="headerlink" title="3.插入视频"></a>3.插入视频</h2><iframe height=315 width=560 src="//player.bilibili.com/player.html?aid=94640968&cid=161566089&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>]]></content>
       
       
       <categories>
