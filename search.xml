@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>[无人机-开发总结03]-无人机数据采集</title>
+      <link href="/2020/03/23/wu-ren-ji-kai-fa-zong-jie-03-wu-ren-ji-shu-ju-cai-ji/"/>
+      <url>/2020/03/23/wu-ren-ji-kai-fa-zong-jie-03-wu-ren-ji-shu-ju-cai-ji/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="无人机-开发总结03-无人机数据采集"><a href="#无人机-开发总结03-无人机数据采集" class="headerlink" title="[无人机-开发总结03]-无人机数据采集"></a>[无人机-开发总结03]-无人机数据采集</h1><h2 id="1-无人机仿真模型"><a href="#1-无人机仿真模型" class="headerlink" title="1  无人机仿真模型"></a>1  无人机仿真模型</h2><h3 id="1-1-无人机结构建模"><a href="#1-1-无人机结构建模" class="headerlink" title="1.1 无人机结构建模"></a>1.1 无人机结构建模</h3><p>使用blender进行机械结构设计成品如下所示:</p><p><img src="https://s1.ax1x.com/2020/03/23/8TJtMt.jpg" alt="图1-1 无人机仿真模型"> </p><p><img src="https://s1.ax1x.com/2020/03/23/8TJdZ8.jpg" alt="图1-2 无人机仿真模型"> </p><p>将各关节导出为dae导入urdf描述文件:</p><p><img src="https://s1.ax1x.com/2020/03/23/8TJQaD.jpg" alt="图1-3 无人机3d模型文件"> </p><h2 id="2-Gazebo仿真环境"><a href="#2-Gazebo仿真环境" class="headerlink" title="2 Gazebo仿真环境"></a>2 Gazebo仿真环境</h2><p><img src="https://s1.ax1x.com/2020/03/23/8TJZx1.jpg" alt="图2-1 无人机仿真环境"> </p><h2 id="3-无人机控制程序"><a href="#3-无人机控制程序" class="headerlink" title="3 无人机控制程序"></a>3 无人机控制程序</h2><h3 id="3-1-无人机悬停控制部分"><a href="#3-1-无人机悬停控制部分" class="headerlink" title="3.1 无人机悬停控制部分"></a>3.1 无人机悬停控制部分</h3><p><img src="https://s1.ax1x.com/2020/03/23/8TJF54.jpg" alt="图3-1 无人机运动控制计算图"> </p><p>通过/NEU_m100/hovering_exmple节点不断发布向无人机发布目标位置信息，然后/NEU_m100/lee_position_controller_node节点接收目标位置信息和里程计获得的无人机位置和位姿信息，来计算出四个电机的角速度，从而控制无人机在仿真环境中的运动。</p><p>附仿真视频：</p><p>1.<a href="https://www.bilibili.com/video/av94640968" target="_blank" rel="noopener">https://www.bilibili.com/video/av94640968</a></p><p>2.<a href="https://www.bilibili.com/video/av94434635" target="_blank" rel="noopener">https://www.bilibili.com/video/av94434635</a></p><h3 id="3-2-数据集采集-水平飞-垂直飞-高低斜着飞"><a href="#3-2-数据集采集-水平飞-垂直飞-高低斜着飞" class="headerlink" title="3.2  数据集采集  (水平飞 垂直飞  高低斜着飞)"></a>3.2  数据集采集  (水平飞 垂直飞  高低斜着飞)</h3><p>运行仿真程序,将所有话题数据保存为.bag文件</p><p><img src="https://s1.ax1x.com/2020/03/23/8TJ8Gd.jpg" alt="图3-2 ROS数据集"> </p><h3 id="3-3-数据整理提取-python-shell脚本"><a href="#3-3-数据整理提取-python-shell脚本" class="headerlink" title="3.3  数据整理提取 python+shell脚本"></a>3.3  数据整理提取 python+shell脚本</h3><p>从bag中提取各个话题原始数据:</p><p><img src="https://s1.ax1x.com/2020/03/23/8TJJxI.jpg" alt="图3-3 传感器数据"></p><p>Shell脚本处理效率提升:</p><p><img src="https://s1.ax1x.com/2020/03/23/8TJwdS.jpg" alt="图3-4 shell脚本"> </p><p>数据类型:</p><p><img src="https://s1.ax1x.com/2020/03/23/8TJ0Ig.jpg" alt="图3-5 电机数据"> </p><p>Python读取txt文件并保存:</p><p><img src="https://s1.ax1x.com/2020/03/23/8TJjoD.jpg" alt="图3-6 生成训练数据集"> </p><h3 id="3-4-数据简单显示"><a href="#3-4-数据简单显示" class="headerlink" title="3.4  数据简单显示"></a>3.4  数据简单显示</h3><p>电机0转速在不同时刻的输出值显示:</p><pre class=" language-python"><code class="language-python">plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>motor_speed<span class="token punctuation">.</span>motor_time<span class="token punctuation">,</span> motor_speed<span class="token punctuation">.</span>motor_angular_velocities0<span class="token punctuation">,</span>label<span class="token operator">=</span><span class="token string">"motor0"</span><span class="token punctuation">)</span></code></pre><p><img src="https://s1.ax1x.com/2020/03/23/8TJWZT.jpg" alt="图3-7 电机数据显示"> </p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 开发总结 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 无人机开发 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>[无人机-开发总结02]-端到端无人机控制方法研究</title>
       <link href="/2020/03/22/wu-ren-ji-kai-fa-zong-jie-02-duan-dao-duan-wu-ren-ji-kong-zhi-fang-fa-yan-jiu/"/>
       <url>/2020/03/22/wu-ren-ji-kai-fa-zong-jie-02-duan-dao-duan-wu-ren-ji-kong-zhi-fang-fa-yan-jiu/</url>
