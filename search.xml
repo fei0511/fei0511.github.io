@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>[树莓派-开发总结01]-可穿戴式智能设备</title>
+      <link href="/2020/03/23/shu-mei-pai-kai-fa-zong-jie-01-ke-chuan-dai-shi-zhi-neng-she-bei/"/>
+      <url>/2020/03/23/shu-mei-pai-kai-fa-zong-jie-01-ke-chuan-dai-shi-zhi-neng-she-bei/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="树莓派-开发总结01-可穿戴式智能设备"><a href="#树莓派-开发总结01-可穿戴式智能设备" class="headerlink" title="[树莓派-开发总结01]-可穿戴式智能设备"></a>[树莓派-开发总结01]-可穿戴式智能设备</h1><p><img src="https://pic.downk.cc/item/5e784f0c5c56091129753b1b.jpg" alt=""></p><h2 id="1-主要功能"><a href="#1-主要功能" class="headerlink" title="1. 主要功能"></a>1. 主要功能</h2><p><strong>1.**</strong>拍照** </p><p> <strong>按键控制</strong></p><p> <strong>语音控制（**</strong>USB<strong>**麦克风）</strong></p><p> <strong>手势控制</strong></p><p>2.图像识别</p><p>3.百度网盘上传</p><p><strong>4. Oled**</strong>显示**</p><p><strong>5.**</strong>语音提示（音响）**</p><h2 id="2-硬件部分"><a href="#2-硬件部分" class="headerlink" title="2.硬件部分"></a>2.硬件部分</h2><h2 id="3-软件部分"><a href="#3-软件部分" class="headerlink" title="3.软件部分"></a>3.软件部分</h2><p><img src="https://pic.downk.cc/item/5e7850295c56091129764dc1.jpg" alt="图3-1 代码结构图"></p><p><img src="https://pic.downk.cc/item/5e78506d5c56091129769b71.jpg" alt="图3-2 主程序流程图"></p><p>代码下载地址：</p><p>链接：<a href="https://pan.baidu.com/s/19JXaf2JXktwehhnHpUzpkw" target="_blank" rel="noopener">https://pan.baidu.com/s/19JXaf2JXktwehhnHpUzpkw</a><br>提取码：hwf6</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 开发总结 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 树莓派开发 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>[无人机-开发总结03]-无人机数据采集</title>
       <link href="/2020/03/23/wu-ren-ji-kai-fa-zong-jie-03-wu-ren-ji-shu-ju-cai-ji/"/>
       <url>/2020/03/23/wu-ren-ji-kai-fa-zong-jie-03-wu-ren-ji-shu-ju-cai-ji/</url>
