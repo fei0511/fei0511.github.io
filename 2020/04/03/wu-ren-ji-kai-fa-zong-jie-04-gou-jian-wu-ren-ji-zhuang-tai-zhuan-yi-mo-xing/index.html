@@ -4,9 +4,11 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="【割胶机器人-开发总结01】- STM32F103串口使用, yunfei">
-    <meta name="description" content="【割胶机器人-开发总结01】- STM32F103串口使用STM32F103的各个串口使用方法及注意事项1.详细使用方法STM32串口——5个串口的使用方法
-https://blog.csdn.net/qq_38351824/article">
+    <meta name="keywords" content="[无人机-开发总结04]-构建无人机状态转移模型, yunfei">
+    <meta name="description" content="1飞控网络1.1   问题分析搭建一个能用来表达飞控模型的网络。具体原理就是：通过当前时刻飞机的状态，当给飞机施加一定的作用力时，来预测飞机下一时刻所处的状态。
+1.2   网络结构网络结构：两个LSTM网络加一个全连接层
+
+1.3   准">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,7 +16,7 @@ https://blog.csdn.net/qq_38351824/article">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>【割胶机器人-开发总结01】- STM32F103串口使用 | yunfei</title>
+    <title>[无人机-开发总结04]-构建无人机状态转移模型 | yunfei</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -283,13 +285,13 @@ https://blog.csdn.net/qq_38351824/article">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://s1.ax1x.com/2020/03/23/8TJdZ8.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        【割胶机器人-开发总结01】- STM32F103串口使用
+                        [无人机-开发总结04]-构建无人机状态转移模型
                     </div>
                 </div>
             </div>
@@ -401,8 +403,8 @@ https://blog.csdn.net/qq_38351824/article">
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E5%89%B2%E8%83%B6%E6%9C%BA%E5%99%A8%E4%BA%BA/">
-                                <span class="chip bg-color">割胶机器人</span>
+                            <a href="/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA%E5%BC%80%E5%8F%91/">
+                                <span class="chip bg-color">无人机开发</span>
                             </a>
                         
                     </div>
@@ -426,28 +428,28 @@ https://blog.csdn.net/qq_38351824/article">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-12-02
+                    2020-04-03
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-03-22
+                    2020-04-03
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    252
+                    1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    4 分
                 </div>
                 
 				
@@ -463,12 +465,154 @@ https://blog.csdn.net/qq_38351824/article">
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="【割胶机器人-开发总结01】-STM32F103串口使用"><a href="#【割胶机器人-开发总结01】-STM32F103串口使用" class="headerlink" title="【割胶机器人-开发总结01】- STM32F103串口使用"></a>【割胶机器人-开发总结01】- STM32F103串口使用</h1><h2 id="STM32F103的各个串口使用方法及注意事项"><a href="#STM32F103的各个串口使用方法及注意事项" class="headerlink" title="STM32F103的各个串口使用方法及注意事项"></a>STM32F103的各个串口使用方法及注意事项</h2><h2 id="1-详细使用方法"><a href="#1-详细使用方法" class="headerlink" title="1.详细使用方法"></a>1.详细使用方法</h2><p>STM32串口——5个串口的使用方法</p>
-<p><a href="https://blog.csdn.net/qq_38351824/article/details/82777751" target="_blank" rel="noopener">https://blog.csdn.net/qq_38351824/article/details/82777751</a></p>
-<h2 id="2-注意事项"><a href="#2-注意事项" class="headerlink" title="2.注意事项"></a>2.注意事项</h2><p>1.UASART1的所用的串口时钟是APB2（最快为72MHZ），而UASART2~5的所用的串口时钟是APB1（最快为36MHZ）；</p>
-<p>2.STM32F103系列单片机共有5个串口，其中1-3是通用同步/异步串行接口USART(Universal Synchronous/Asynchronous Receiver/Transmitter)，4,、5是通用异步串行接口UART(Universal Asynchronous Receiver/Transmitter)。</p>
-<p>3.在使用UASART时，如果不能正常使用，要查看串口收发的引脚是否和电阻相连。</p>
-<p>4.在进行发送数据时，如果数据中存在0x00,需要想办法将它转换为其他格式的数据进行发送（如0x01,保证不和正确的数据冲突即可）。因为，在发送数据中，如果是0x00，相当于’\0’,串口默认该帧数据已发送结束。</p>
+                <h1 id="1飞控网络"><a href="#1飞控网络" class="headerlink" title="1飞控网络"></a>1飞控网络</h1><h2 id="1-1-问题分析"><a href="#1-1-问题分析" class="headerlink" title="1.1   问题分析"></a>1.1   问题分析</h2><p>搭建一个能用来表达飞控模型的网络。具体原理就是：通过当前时刻飞机的状态，当给飞机施加一定的作用力时，来预测飞机下一时刻所处的状态。</p>
+<h2 id="1-2-网络结构"><a href="#1-2-网络结构" class="headerlink" title="1.2   网络结构"></a>1.2   网络结构</h2><p>网络结构：两个LSTM网络加一个全连接层</p>
+<p><img src="https://s1.ax1x.com/2020/04/03/GahXs1.png" alt="图1-1 网络结构图及数据类型"></p>
+<h2 id="1-3-准备数据集"><a href="#1-3-准备数据集" class="headerlink" title="1.3   准备数据集"></a>1.3   准备数据集</h2><p>通过对问题的分析，我们使用了里程计采集的位置信息（x、y、z三个维度）、IMU的角速度、线加速度以及姿态角的四元数、GPS的维度、经度和海拔和执行的动作量（四个电机的速度）来作为网络的输入；然后来预测下一时刻飞机的所有状态，数据集具体格式如下所示：</p>
+<p><strong>网络输入数据：</strong></p>
+<p>维度：21维</p>
+<p>当前时刻里程计位置数据: pos(t)</p>
+<p>当前时刻Imu数据: Imu_angular_1*3(t)、</p>
+<p>​     Imu_linear_acc_1<em>3(t)、Imu_orientation_1</em>4(t)</p>
+<p>当前时刻GPS数据: latitude(t)、 longitude(t)、attitude(t)</p>
+<p>当前时刻执行的动作量: motor_vel(t)</p>
+<p><strong>网络输出数据：</strong></p>
+<p>维度：17维</p>
+<p>下一时刻里程计位置数据: pos(t+1)</p>
+<p>下一时刻Imu数据: Imu_angular_1*3(t+1)</p>
+<p> Imu_linear_acc_1<em>3(t+1)、 Imu_orientation_1</em>4(t+1)</p>
+<p>下一时刻GPS数据:</p>
+<p> latitude(t+1)、 longitude(t+1)、attitude(t+1)</p>
+<p><img src="https://s1.ax1x.com/2020/04/03/GahOMR.png" alt="图1-2数据集"></p>
+<h2 id="1-4-训练过程"><a href="#1-4-训练过程" class="headerlink" title="1.4   训练过程"></a>1.4   训练过程</h2><p>（1）   一开始我们只使用一个单层LSTM网络，（悬停与着陆数据集）进行训练后损失曲线如下图：</p>
+<p><img src="https://s1.ax1x.com/2020/04/03/Gahqz9.png" alt="图1-3 损失变化曲线"></p>
+<p>（2）   改用一个两层的LSTM网络加一层全连接网络（悬停与着陆数据集），进行训练后损失曲线如下图：</p>
+<p><img src="https://s1.ax1x.com/2020/04/03/GahbRJ.png" alt="图1-4 损失变化曲线"></p>
+<p>训练集损失</p>
+<p>train_loss:</p>
+<p>[0.5328224748931825, 0.26620951036922635, 0.19988369228783995, 0.18238666167017073, 0.15780297216959296, 0.13405323654878884, 0.11955312862759455, 0.12240861531812698, 0.11148360138759017, 0.10631599110318347, 0.09910413057776168, 0.049408715929603206, 0.04769245133502409, 0.04726856110850349, 0.04721733894082718, 0.0468275742395781, 0.04609204622916877, 0.04590331030194648, 0.04610561237088404,     0.04580454896437004]</p>
+<p>验证集损失</p>
+<p>valid_loss:</p>
+<p>[0.2610532984137535, 0.21840908512473106, 0.12710216868668794, 0.13170075602829456, 0.10646352278068662, 0.10994287248700857, 0.10560724565759301, 0.09868648458272218, 0.08157385680824518, 0.09954582054167986, 0.045364946499466895, 0.045166648412123325, 0.04495138650760055,      0.04579222447238863,     0.04504713535308838,</p>
+<p>0.04317425129935146, 0.0432081026956439, 0.0428824489749968, 0.042863981537520884,     0.04279392964206636]</p>
+<p>测试集损失</p>
+<p>test_loss:</p>
+<p> [0.04178078664466739]</p>
+<p>（3）   通过进一步调整网络结构，我们得到由一个两层的LSTM网络加一层全连接网络来进行训练（随机飞行数据集），损失曲线如下图：</p>
+<p><img src="https://s1.ax1x.com/2020/04/03/GahHG4.png" alt="图1-5 损失变化曲线"></p>
+<p>训练集损失</p>
+<p>train_loss:</p>
+<p>[5.54658406406641, 2.7655773708224296, 1.9791212353110312, 1.9600225511938334, 1.6933349587023259, 1.625489605218172, 1.508753139078617, 1.5195634232461452, 1.3797193969041108, 1.3643508572131395, 1.291658177152276, 0.7853003278374672, 0.7368028278648854, 0.7272456296905875, 0.7046212753653527, 0.6962497440353036, 0.6476068877056241, 0.6371722454577684, 0.6312894182279706, 0.6313313307613134]</p>
+<p>验证集损失</p>
+<p>valid_loss:</p>
+<p>[4.110855451822281, 2.306476159095764, 1.9303114801645278, 2.1317190492153166, 1.668769862651825, 1.6565870666503906, 1.7624870729446411, 1.4876971435546875, 1.4524815315008164, 1.562660975754261, 1.183311020731926, 0.6977832567691803, 0.6980695559084416, 0.6902341730892658, 0.6989173652231693, 0.6376479545235634, 0.6043669553101063, 0.6014045214653015, 0.6008586919307709, 0.598616446107626]</p>
+<p>测试集损失</p>
+<p>test_loss:</p>
+<p>[0.46288112133741377]</p>
+<h2 id="1-5-预测结果"><a href="#1-5-预测结果" class="headerlink" title="1.5   预测结果"></a>1.5   预测结果</h2><p>（1）使用悬停数据集来进行预测</p>
+<p>-——————————</p>
+<p>预测值：0.131</p>
+<p>真实值：0.131</p>
+<p>-——————————</p>
+<p>预测值：-0.007</p>
+<p>真实值：-0.007</p>
+<p>-——————————</p>
+<p>预测值：2.952</p>
+<p>真实值：2.940</p>
+<p>-——————————</p>
+<p>预测值：0.001</p>
+<p>真实值：-0.001</p>
+<p>-——————————</p>
+<p>预测值：0.005</p>
+<p>真实值：0.006</p>
+<p>-——————————</p>
+<p>预测值：-0.000</p>
+<p>真实值：0.002</p>
+<p>-——————————</p>
+<p>预测值：0.000</p>
+<p>真实值：0.000</p>
+<p>-——————————</p>
+<p>预测值：-0.265</p>
+<p>真实值：-0.354</p>
+<p>-——————————</p>
+<p>预测值：-0.118</p>
+<p>真实值：-0.214</p>
+<p>-——————————</p>
+<p>预测值：0.000</p>
+<p>真实值：0.000</p>
+<p>-——————————</p>
+<p>预测值：0.000</p>
+<p>真实值：0.000</p>
+<p>-——————————</p>
+<p>预测值：0.000</p>
+<p>真实值：0.000</p>
+<p>-——————————</p>
+<p>预测值：1.000</p>
+<p>真实值：1.000</p>
+<p>-——————————</p>
+<p>预测值：41.766</p>
+<p>真实值：41.766</p>
+<p>-——————————</p>
+<p>预测值：73.984</p>
+<p>真实值：73.984</p>
+<p>-——————————</p>
+<p>预测值：53.121</p>
+<p>真实值：53.110</p>
+<p>-——————————</p>
+<p>预测值：100690.562</p>
+<p>真实值：100690.641</p>
+<p>（2）使用随机飞行数据集来进行预测</p>
+<p>-——————————</p>
+<p>预测值：1.294</p>
+<p>真实值：1.203</p>
+<p>-——————————</p>
+<p>预测值：0.647</p>
+<p>真实值：0.292</p>
+<p>-——————————</p>
+<p>预测值：10.323</p>
+<p>真实值：10.529</p>
+<p>-——————————</p>
+<p>预测值：0.001</p>
+<p>真实值：-0.463</p>
+<p>-——————————</p>
+<p>预测值：0.006</p>
+<p>真实值：-1.134</p>
+<p>-——————————</p>
+<p>预测值：-0.002</p>
+<p>真实值：-0.054</p>
+<p>-——————————</p>
+<p>预测值：0.000</p>
+<p>真实值：0.000</p>
+<p>-——————————</p>
+<p>预测值：-0.095</p>
+<p>真实值：-0.546</p>
+<p>-——————————</p>
+<p>预测值：-0.222</p>
+<p>真实值：0.034</p>
+<p>-——————————</p>
+<p>预测值：-0.001</p>
+<p>真实值：0.078</p>
+<p>-——————————</p>
+<p>预测值：0.010</p>
+<p>真实值：0.111</p>
+<p>-——————————</p>
+<p>预测值：0.001</p>
+<p>真实值：0.004</p>
+<p>-——————————</p>
+<p>预测值：0.983</p>
+<p>真实值：-0.991</p>
+<p>-——————————</p>
+<p>预测值：41.766</p>
+<p>真实值：41.766</p>
+<p>-——————————</p>
+<p>预测值：73.984</p>
+<p>真实值：73.984</p>
+<p>-——————————</p>
+<p>预测值：60.173</p>
+<p>真实值：59.991</p>
+<p>-——————————</p>
+<p>预测值：100601.930</p>
+<p>真实值：100604.977</p>
 
             </div>
             <hr/>
@@ -494,7 +638,7 @@ https://blog.csdn.net/qq_38351824/article">
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://fei0511.github.io/2019/12/02/stm32f103-de-ge-ge-chuan-kou-shi-yong-fang-fa/">http://fei0511.github.io/2019/12/02/stm32f103-de-ge-ge-chuan-kou-shi-yong-fang-fa/</a>
+                    <a href="http://fei0511.github.io/2020/04/03/wu-ren-ji-kai-fa-zong-jie-04-gou-jian-wu-ren-ji-zhuang-tai-zhuan-yi-mo-xing/">http://fei0511.github.io/2020/04/03/wu-ren-ji-kai-fa-zong-jie-04-gou-jian-wu-ren-ji-zhuang-tai-zhuan-yi-mo-xing/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -532,8 +676,8 @@ https://blog.csdn.net/qq_38351824/article">
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E5%89%B2%E8%83%B6%E6%9C%BA%E5%99%A8%E4%BA%BA/">
-                                    <span class="chip bg-color">割胶机器人</span>
+                                <a href="/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA%E5%BC%80%E5%8F%91/">
+                                    <span class="chip bg-color">无人机开发</span>
                                 </a>
                             
                         </div>
@@ -962,80 +1106,28 @@ https://blog.csdn.net/qq_38351824/article">
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2019/12/02/gei-yong-hexo-xie-de-bo-ke-tian-jia-ping-lun-gong-neng/">
+                <a href="/2020/04/03/wu-ren-ji-kai-fa-zong-jie-04-gou-jian-wu-ren-ji-zhuang-tai-zhuan-yi-mo-xing/">
                     <div class="card-image">
                         
+                        <img src="https://s1.ax1x.com/2020/03/23/8TJdZ8.jpg" class="responsive-img" alt="[无人机-开发总结04]-构建无人机状态转移模型">
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="【经验分享03】- 添加评论功能">
-                        
-                        <span class="card-title">【经验分享03】- 添加评论功能</span>
+                        <span class="card-title">[无人机-开发总结04]-构建无人机状态转移模型</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            【经验分享03】- 添加评论功能给用hexo写的博客添加评论功能1.Hexo搭建的个人博客配置评论系统：Valine
-https://www.jianshu.com/p/59a5935c4248
-2.Hexo 搭建：配置 Gitalk 评论
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2019-12-02
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/" class="post-category">
-                                    经验分享
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/">
-                        <span class="chip bg-color">个人网站</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2019/12/02/she-zhi-shu-mei-pai-wei-mian-mi-ssh-deng-lu/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="【割胶机器人-开发总结02】- 设置树莓派为免密ssh登录">
-                        
-                        <span class="card-title">【割胶机器人-开发总结02】- 设置树莓派为免密ssh登录</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            【割胶机器人-开发总结02】- 设置树莓派为免密ssh登录1.SSH使用密钥免密码登录原文链接：SSH使用密钥免密码登录
-使用ssh远程连接服务器，有两种身份校验方式：账号密码和秘钥。使用秘钥的方式理论上更加安全，而且免去了输入密码的步骤，
+                            无人机仿真模型构建、gazebo仿真环境搭建、无人机数据集采集
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-12-02
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-03
                             </span>
                         <span class="publish-author">
                             
@@ -1049,11 +1141,60 @@ https://www.jianshu.com/p/59a5935c4248
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%89%B2%E8%83%B6%E6%9C%BA%E5%99%A8%E4%BA%BA/">
-                        <span class="chip bg-color">割胶机器人</span>
+                    <a href="/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA%E5%BC%80%E5%8F%91/">
+                        <span class="chip bg-color">无人机开发</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/03/23/matlab-shi-yong-ke-cheng-xue-xi-yong-yi-chuan-suan-fa-qiu-jie-tsp-wen-ti/">
+                    <div class="card-image">
+                        
+                        <img src="https://pic.downk.cc/item/5e78c18e9dbe9d88c56225b7.png" class="responsive-img" alt="[Matlab使用-课程学习]-用遗传算法求解TSP问题">
+                        
+                        <span class="card-title">[Matlab使用-课程学习]-用遗传算法求解TSP问题</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Matlab环境下用遗传算法求解TSP问题
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-23
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    课程学习
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Matlab%E4%BD%BF%E7%94%A8/">
+                        <span class="chip bg-color">Matlab使用</span>
                     </a>
                     
                 </div>
