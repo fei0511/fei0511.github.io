@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>[Matalb使用-课程学习]-图像分割与目标计数</title>
+      <link href="/2020/04/03/matalb-shi-yong-ke-cheng-xue-xi-tu-xiang-fen-ge-yu-mu-biao-ji-shu/"/>
+      <url>/2020/04/03/matalb-shi-yong-ke-cheng-xue-xi-tu-xiang-fen-ge-yu-mu-biao-ji-shu/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="1-基于分水岭算法的图像分割及目标计数"><a href="#1-基于分水岭算法的图像分割及目标计数" class="headerlink" title="1 基于分水岭算法的图像分割及目标计数"></a>1 基于分水岭算法的图像分割及目标计数</h1><h2 id="1-1-简介"><a href="#1-1-简介" class="headerlink" title="1.1 简介"></a>1.1 简介</h2><p>在<a href="https://zh.wikipedia.org/wiki/计算机视觉" target="_blank" rel="noopener">计算机视觉</a>领域，图像分割（Segmentation）指的是将<a href="https://zh.wikipedia.org/wiki/数字图像" target="_blank" rel="noopener">数字图像</a>细分为多个图像子区域（像素的<a href="https://zh.wikipedia.org/wiki/集合" target="_blank" rel="noopener">集合</a>）（也被称作超像素）的过程。图像分割的目的是简化或改变图像的表示形式，使得图像更容易理解和分析。图像分割通常用于定位图像中的物体和<a href="https://zh.wikipedia.org/wiki/边界" target="_blank" rel="noopener">边界</a>（<a href="https://zh.wikipedia.org/wiki/线" target="_blank" rel="noopener">线</a>，<a href="https://zh.wikipedia.org/wiki/曲线" target="_blank" rel="noopener">曲线</a>等）。更精确的，图像分割是对图像中的每个<a href="https://zh.wikipedia.org/wiki/像素" target="_blank" rel="noopener">像素</a>加<a href="https://zh.wikipedia.org/wiki/标签" target="_blank" rel="noopener">标签</a>的一个过程，这一过程使得具有相同标签的像素具有某种共同视觉特性。</p><h2 id="1-2-原理及其主要公式"><a href="#1-2-原理及其主要公式" class="headerlink" title="1.2 原理及其主要公式"></a>1.2 原理及其主要公式</h2><h3 id="1-2-1-分水岭算法基本原理"><a href="#1-2-1-分水岭算法基本原理" class="headerlink" title="1.2.1 分水岭算法基本原理"></a>1.2.1 分水岭算法基本原理</h3><p>分水岭分割是基于自然的启发算法来模拟水流通过地形起伏的现象从而研究总结出来的一种分割方法，其基本原理是将图像特征看作地理上的地貌特征，利用像素的灰度值分布特征，对每个符合特征的区域进行划分，形成边界以构成分水岭。</p><p>水位不断上升，汇水盆地之间及其与背景之间的坝也越来越长。构筑水坝的目的是阻止盆地之间及其与背景之间的水汇聚。该过程一直持续，直到到达水的最高水位。最终水坝就是我们希望的分割结果。它的一条重要性质就是水坝组成一条连通的路径，这样，在两个区域之间就给出了连续的边界。</p><p>因为灰度变化较小的区域有较小的梯度值，因此，分水岭分割通常用于一幅图像的梯度，而不是图像本身。这样，汇水盆地的区域最小值就能很好地与待分割区域的较小梯度值联系起来。</p><p><img src="https://s1.ax1x.com/2020/04/03/Ga7GIP.jpg" alt="图1-1 原图及图像"></p><p>在上面的水岭算法示意图中局部极小值、积水盆地，分水岭线以及水坝的概念可以描述为：</p><p>（1）区域极小值：导数为0的点，局部范围内的最小值点；</p><p>（2）集水盆（汇水盆地）：当“水”落到汇水盆地时，“水”会自然而然地流到汇水盆地中的区域极小值点处。每一个汇水盆地中有且仅有一个区域极小值点；</p><p>（3）分水岭：当“水”处于分水岭的位置时，会等概率地流向多个与它相邻的汇水盆地中；</p><p>（4）水坝：人为修建的分水岭，防止相邻汇水盆地之间的“水”互相交汇影响</p><p>分水岭计算方法被分为两个步骤，分别是排序过程和淹没过程。计算时，首先要按照从低到高的排序方式对区域内的每个像素进行灰度级别的排序，然后在从低到高进行淹没，并对每个区域极小值在 H 阶高度的影响域采用先进先出的结构进行标注和判断。通过分水岭的变换所得到输入图像为集水盆图像，每个集水盆之间的边界就是分水岭，而分水岭则代表极大值，所以想要获取图像的信息，需要将梯度图像作为输入图像进行计算，计算公式如下：</p><p><img src="https://s1.ax1x.com/2020/04/03/Ga78at.png" alt="（式1.1）"> </p><p>在该计算公式中 <em>f(x,y)</em> 则代表原始图像，<em>grad{.}</em> 则代表梯度运算。</p><h3 id="1-2-2-目标计数基本原理"><a href="#1-2-2-目标计数基本原理" class="headerlink" title="1.2.2 目标计数基本原理"></a>1.2.2 目标计数基本原理</h3><p>本文使用的目标计数原理是基于Matlab中的bwboundaries函数实现的。bwboundaries是一个函数，可以用来获取二值图中对象的轮廓，包括外部轮廓与内部边缘。</p><p>[B,L,N]=bwboundaries(show_img,’noholes’);</p><p>使用上面的语句来获取图像连通区域并求取其轮廓。其中N为物体目标的个数。在使用该函数之前，首先要对原图像进行中值滤波操作去除图像中的噪声；然后进行二值化操作，来将目标物体提取出来；之后再针对目标物体有交叉重叠部分的图像，采用分水岭算法来进行图像分割；最后使用bwboundaries函数，来通过计算目标物体的连通域个数，最终计算出目标物体的数目。</p><p>在实验的过程中，通过计算每个目标的连通域的中心位置，还对每个目标进行了标号，来标记每个物体的位置。实验效果图见图1-2。</p><h2 id="1-3-实验结果"><a href="#1-3-实验结果" class="headerlink" title="1.3 实验结果"></a>1.3 实验结果</h2><p>通过运行分水岭图像分割方法，对三张图片进行了图像分割与物体计数。得到的结果图下图1-1到图1-6所示。其中图1-1的a图为原始图像，图1-1的b图为进行图像分割后的图像；计算得到的三个物体数目分别是48个、10个以及97个。</p><p><img src="https://s1.ax1x.com/2020/04/03/GaH60A.png" alt=""></p><p><img src="https://s1.ax1x.com/2020/04/03/GabG38.png" alt=""></p><p><img src="https://s1.ax1x.com/2020/04/03/GaHymd.png" alt=""></p><h5 id="详细代码及文件下载地址："><a href="#详细代码及文件下载地址：" class="headerlink" title="详细代码及文件下载地址："></a>详细代码及文件下载地址：</h5><p>链接：<a href="https://pan.baidu.com/s/1U2msxg85tro4a8uWSNQH2g" target="_blank" rel="noopener">https://pan.baidu.com/s/1U2msxg85tro4a8uWSNQH2g</a><br>提取码：3ouj</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 课程学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Matlab使用 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>[无人机-开发总结04]-构建无人机状态转移模型</title>
       <link href="/2020/04/03/wu-ren-ji-kai-fa-zong-jie-04-gou-jian-wu-ren-ji-zhuang-tai-zhuan-yi-mo-xing/"/>
       <url>/2020/04/03/wu-ren-ji-kai-fa-zong-jie-04-gou-jian-wu-ren-ji-zhuang-tai-zhuan-yi-mo-xing/</url>
