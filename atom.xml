@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://fei0511.github.io/"/>
-  <updated>2020-04-21T01:16:37.081Z</updated>
+  <updated>2020-04-21T01:21:45.250Z</updated>
   <id>http://fei0511.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>添加图片</title>
+    <title>添加图片和视频</title>
     <link href="http://fei0511.github.io/2020/04/20/tian-jia-tu-pian/"/>
     <id>http://fei0511.github.io/2020/04/20/tian-jia-tu-pian/</id>
     <published>2020-04-20T13:01:57.000Z</published>
-    <updated>2020-04-21T01:16:37.081Z</updated>
+    <updated>2020-04-21T01:21:45.250Z</updated>
     
     <summary type="html">
     
@@ -36,6 +36,8 @@
     </summary>
     
     
+    
+      <category term="功能测试" scheme="http://fei0511.github.io/tags/%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95/"/>
     
   </entry>
   
