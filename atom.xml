@@ -3,10 +3,10 @@
   <title>yunfei</title>
   
   <subtitle>Do what you like</subtitle>
-  <link href="/blog/atom.xml" rel="self"/>
+  <link href="/atom.xml" rel="self"/>
   
   <link href="http://fei0511.github.io/"/>
-  <updated>2020-04-21T01:21:45.250Z</updated>
+  <updated>2020-04-27T12:16:10.308Z</updated>
   <id>http://fei0511.github.io/</id>
   
   <author>
@@ -15,6 +15,60 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[经验分享07]-配置V2ray服务器</title>
+    <link href="http://fei0511.github.io/2020/04/27/jing-yan-fen-xiang-07-pei-zhi-v2ray-fu-wu-qi/"/>
+    <id>http://fei0511.github.io/2020/04/27/jing-yan-fen-xiang-07-pei-zhi-v2ray-fu-wu-qi/</id>
+    <published>2020-04-27T11:50:46.000Z</published>
+    <updated>2020-04-27T12:16:10.308Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="经验分享" scheme="http://fei0511.github.io/categories/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/"/>
+    
+    
+      <category term="常用工具" scheme="http://fei0511.github.io/tags/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[经验分享07]-配置V2ray服务器</title>
+    <link href="http://fei0511.github.io/2020/04/27/2020-04-26-jing-yan-v2ray-fu-wu-qi-da-jian/"/>
+    <id>http://fei0511.github.io/2020/04/27/2020-04-26-jing-yan-v2ray-fu-wu-qi-da-jian/</id>
+    <published>2020-04-27T11:50:46.000Z</published>
+    <updated>2020-04-27T11:54:56.811Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="经验分享" scheme="http://fei0511.github.io/categories/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/"/>
+    
+    
+      <category term="常用工具" scheme="http://fei0511.github.io/tags/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
   
   <entry>
     <title>添加图片和视频</title>
@@ -29,7 +83,7 @@
       
         
         
-          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\blog\assets\css\APlayer.min.css&quot;&gt;&lt;script
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
         
       
     
@@ -54,7 +108,7 @@
       
         
         
-          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\blog\assets\css\APlayer.min.css&quot;&gt;&lt;script
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
         
       
     
@@ -81,7 +135,7 @@
       
         
         
-          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\blog\assets\css\APlayer.min.css&quot;&gt;&lt;script
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
         
       
     
@@ -108,7 +162,7 @@
       
         
         
-          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\blog\assets\css\APlayer.min.css&quot;&gt;&lt;script
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
         
       
     
@@ -135,7 +189,7 @@
       
         
         
-          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\blog\assets\css\APlayer.min.css&quot;&gt;&lt;script
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
         
       
     
@@ -162,7 +216,7 @@
       
         
         
-          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\blog\assets\css\APlayer.min.css&quot;&gt;&lt;script
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
         
       
     
@@ -189,7 +243,7 @@
       
         
         
-          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\blog\assets\css\APlayer.min.css&quot;&gt;&lt;script
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
         
       
     
@@ -216,7 +270,7 @@
       
         
         
-          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\blog\assets\css\APlayer.min.css&quot;&gt;&lt;script
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
         
       
     
@@ -243,7 +297,7 @@
       
         
         
-          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\blog\assets\css\APlayer.min.css&quot;&gt;&lt;script
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
         
       
     
@@ -270,7 +324,7 @@
       
         
         
-          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\blog\assets\css\APlayer.min.css&quot;&gt;&lt;script
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
         
       
     
@@ -297,7 +351,7 @@
       
         
         
-          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\blog\assets\css\APlayer.min.css&quot;&gt;&lt;script
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
         
       
     
@@ -324,7 +378,7 @@
       
         
         
-          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\blog\assets\css\APlayer.min.css&quot;&gt;&lt;script
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
         
       
     
@@ -351,7 +405,7 @@
       
         
         
-          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\blog\assets\css\APlayer.min.css&quot;&gt;&lt;script
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
         
       
     
@@ -378,7 +432,7 @@
       
         
         
-          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\blog\assets\css\APlayer.min.css&quot;&gt;&lt;script
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
         
       
     
@@ -405,7 +459,7 @@
       
         
         
-          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\blog\assets\css\APlayer.min.css&quot;&gt;&lt;script
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
         
       
     
@@ -432,7 +486,7 @@
       
         
         
-          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\blog\assets\css\APlayer.min.css&quot;&gt;&lt;script
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
         
       
     
@@ -459,7 +513,7 @@
       
         
         
-          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\blog\assets\css\APlayer.min.css&quot;&gt;&lt;script
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
         
       
     
@@ -484,7 +538,7 @@
       
         
         
-          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\blog\assets\css\APlayer.min.css&quot;&gt;&lt;script
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
         
       
     
