@@ -4,14 +4,12 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="[无人机-开发总结03]-无人机数据采集, yunfei">
-    <meta name="description" content="[无人机-开发总结03]-无人机数据采集1  无人机仿真模型1.1 无人机结构建模使用blender进行机械结构设计成品如下所示:
- 
- 
-将各关节导出为dae导入urdf描述文件:
- 
-2 Gazebo仿真环境 
-3 无人机控制程序3.1">
+    <meta name="keywords" content="[经验分享08]-通过Cloudreve在VPS上搭建私人云盘, yunfei">
+    <meta name="description" content="[经验分享08]-通过Cloudreve在VPS上搭建私人云盘1.私人云盘最终效果展示
+
+
+
+2.搭建前准备工作2.1 VPS云服务器购买如果有信用卡可以白嫖谷歌云的服务器，而这里我们购买的是阿里云香港服务器,系统镜像为Debian9,价格">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +17,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>[无人机-开发总结03]-无人机数据采集 | yunfei</title>
+    <title>[经验分享08]-通过Cloudreve在VPS上搭建私人云盘 | yunfei</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -288,13 +286,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://s1.ax1x.com/2020/03/23/8TJdZ8.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://pic.downk.cc/item/5eae9e49c2a9a83be5a52079.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        [无人机-开发总结03]-无人机数据采集
+                        [经验分享08]-通过Cloudreve在VPS上搭建私人云盘
                     </div>
                 </div>
             </div>
@@ -406,8 +404,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA%E5%BC%80%E5%8F%91/">
-                                <span class="chip bg-color">无人机开发</span>
+                            <a href="/tags/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/">
+                                <span class="chip bg-color">常用工具</span>
                             </a>
                         
                     </div>
@@ -418,8 +416,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%BC%80%E5%8F%91%E6%80%BB%E7%BB%93/" class="post-category">
-                                开发总结
+                            <a href="/categories/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/" class="post-category">
+                                经验分享
                             </a>
                         
                     </div>
@@ -431,28 +429,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-03-23
+                    2020-05-03
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-03-23
+                    2020-05-03
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    302
+                    563
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 				
@@ -468,30 +466,42 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="无人机-开发总结03-无人机数据采集"><a href="#无人机-开发总结03-无人机数据采集" class="headerlink" title="[无人机-开发总结03]-无人机数据采集"></a>[无人机-开发总结03]-无人机数据采集</h1><h2 id="1-无人机仿真模型"><a href="#1-无人机仿真模型" class="headerlink" title="1  无人机仿真模型"></a>1  无人机仿真模型</h2><h3 id="1-1-无人机结构建模"><a href="#1-1-无人机结构建模" class="headerlink" title="1.1 无人机结构建模"></a>1.1 无人机结构建模</h3><p>使用blender进行机械结构设计成品如下所示:</p>
-<p><img src="https://s1.ax1x.com/2020/03/23/8TJtMt.jpg" alt="图1-1 无人机仿真模型"> </p>
-<p><img src="https://s1.ax1x.com/2020/03/23/8TJdZ8.jpg" alt="图1-2 无人机仿真模型"> </p>
-<p>将各关节导出为dae导入urdf描述文件:</p>
-<p><img src="https://s1.ax1x.com/2020/03/23/8TJQaD.jpg" alt="图1-3 无人机3d模型文件"> </p>
-<h2 id="2-Gazebo仿真环境"><a href="#2-Gazebo仿真环境" class="headerlink" title="2 Gazebo仿真环境"></a>2 Gazebo仿真环境</h2><p><img src="https://s1.ax1x.com/2020/03/23/8TJZx1.jpg" alt="图2-1 无人机仿真环境"> </p>
-<h2 id="3-无人机控制程序"><a href="#3-无人机控制程序" class="headerlink" title="3 无人机控制程序"></a>3 无人机控制程序</h2><h3 id="3-1-无人机悬停控制部分"><a href="#3-1-无人机悬停控制部分" class="headerlink" title="3.1 无人机悬停控制部分"></a>3.1 无人机悬停控制部分</h3><p><img src="https://s1.ax1x.com/2020/03/23/8TJF54.jpg" alt="图3-1 无人机运动控制计算图"> </p>
-<p>通过/NEU_m100/hovering_exmple节点不断发布向无人机发布目标位置信息，然后/NEU_m100/lee_position_controller_node节点接收目标位置信息和里程计获得的无人机位置和位姿信息，来计算出四个电机的角速度，从而控制无人机在仿真环境中的运动。</p>
-<p>附仿真视频：</p>
-<p>1.<a href="https://www.bilibili.com/video/av94640968" target="_blank" rel="noopener">https://www.bilibili.com/video/av94640968</a></p>
-<p>2.<a href="https://www.bilibili.com/video/av94434635" target="_blank" rel="noopener">https://www.bilibili.com/video/av94434635</a></p>
-<h3 id="3-2-数据集采集-水平飞-垂直飞-高低斜着飞"><a href="#3-2-数据集采集-水平飞-垂直飞-高低斜着飞" class="headerlink" title="3.2  数据集采集  (水平飞 垂直飞  高低斜着飞)"></a>3.2  数据集采集  (水平飞 垂直飞  高低斜着飞)</h3><p>运行仿真程序,将所有话题数据保存为.bag文件</p>
-<p><img src="https://s1.ax1x.com/2020/03/23/8TJ8Gd.jpg" alt="图3-2 ROS数据集"> </p>
-<h3 id="3-3-数据整理提取-python-shell脚本"><a href="#3-3-数据整理提取-python-shell脚本" class="headerlink" title="3.3  数据整理提取 python+shell脚本"></a>3.3  数据整理提取 python+shell脚本</h3><p>从bag中提取各个话题原始数据:</p>
-<p><img src="https://s1.ax1x.com/2020/03/23/8TJJxI.jpg" alt="图3-3 传感器数据"></p>
-<p>Shell脚本处理效率提升:</p>
-<p><img src="https://s1.ax1x.com/2020/03/23/8TJwdS.jpg" alt="图3-4 shell脚本"> </p>
-<p>数据类型:</p>
-<p><img src="https://s1.ax1x.com/2020/03/23/8TJ0Ig.jpg" alt="图3-5 电机数据"> </p>
-<p>Python读取txt文件并保存:</p>
-<p><img src="https://s1.ax1x.com/2020/03/23/8TJjoD.jpg" alt="图3-6 生成训练数据集"> </p>
-<h3 id="3-4-数据简单显示"><a href="#3-4-数据简单显示" class="headerlink" title="3.4  数据简单显示"></a>3.4  数据简单显示</h3><p>电机0转速在不同时刻的输出值显示:</p>
-<pre class=" language-python"><code class="language-python">plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>motor_speed<span class="token punctuation">.</span>motor_time<span class="token punctuation">,</span> motor_speed<span class="token punctuation">.</span>motor_angular_velocities0<span class="token punctuation">,</span>label<span class="token operator">=</span><span class="token string">"motor0"</span><span class="token punctuation">)</span></code></pre>
-<p><img src="https://s1.ax1x.com/2020/03/23/8TJWZT.jpg" alt="图3-7 电机数据显示"> </p>
+                <h1 id="经验分享08-通过Cloudreve在VPS上搭建私人云盘"><a href="#经验分享08-通过Cloudreve在VPS上搭建私人云盘" class="headerlink" title="[经验分享08]-通过Cloudreve在VPS上搭建私人云盘"></a>[经验分享08]-通过Cloudreve在VPS上搭建私人云盘</h1><h2 id="1-私人云盘最终效果展示"><a href="#1-私人云盘最终效果展示" class="headerlink" title="1.私人云盘最终效果展示"></a>1.私人云盘最终效果展示</h2><p><img src="pic/2020/05/%E4%BA%91%E7%9B%98%E7%99%BB%E5%BD%95%E7%95%8C%E9%9D%A2.png" alt="云盘登录界面"></p>
+<p><img src="pic/2020/05/%E4%B8%AA%E4%BA%BA%E4%BA%91%E7%9B%98%E4%B8%BB%E7%95%8C%E9%9D%A2.png" alt="个人云盘主界面"></p>
+<p><img src="pic/2020/05/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E9%80%9F%E5%BA%A6.png" alt="文件上传速度"></p>
+<p><img src="pic/2020/05/%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD%E9%80%9F%E5%BA%A6.png" alt="文件下载速度"></p>
+<h2 id="2-搭建前准备工作"><a href="#2-搭建前准备工作" class="headerlink" title="2.搭建前准备工作"></a>2.搭建前准备工作</h2><h3 id="2-1-VPS云服务器购买"><a href="#2-1-VPS云服务器购买" class="headerlink" title="2.1 VPS云服务器购买"></a>2.1 VPS云服务器购买</h3><p>如果有信用卡可以白嫖<code>谷歌云</code>的服务器，而这里我们购买的是阿里云<code>香港服务器,系统镜像为</code>Debian9<code>,价格为</code>24/月`,配置很简单，设置好密码后即可在网页端登陆刚刚购买的服务器了。</p>
+<blockquote>
+<p>搜了搜网上推荐的<a href="https://www.pianyivps.com/3229.html" target="_blank" rel="noopener">vps购买指南</a>贴在下面👇</p>
+<p><img src="https://pic.downk.cc/item/5ea6c973c2a9a83be5aa881f.png" alt="各VPS对比"></p>
+</blockquote>
+<h3 id="2-2-宝塔linux面板安装"><a href="#2-2-宝塔linux面板安装" class="headerlink" title="2.2 宝塔linux面板安装"></a>2.2 宝塔linux面板安装</h3><p>参考：<a href="https://www.dhzy.fun/archives/1811.html" target="_blank" rel="noopener">大海资源网-超简单个人网盘搭建教程</a></p>
+<h4 id="1、官方支持的网站和文档"><a href="#1、官方支持的网站和文档" class="headerlink" title="1、官方支持的网站和文档"></a>1、官方支持的网站和文档</h4><ul>
+<li>官网：<a href="https://cloudreve.org/" target="_blank" rel="noopener">https://cloudreve.org/</a></li>
+<li>github：<a href="https://github.com/cloudreve/Cloudreve" target="_blank" rel="noopener">https://github.com/cloudreve/Cloudreve</a></li>
+<li>下载：<a href="https://github.com/cloudreve/Cloudreve/releases" target="_blank" rel="noopener">https://github.com/cloudreve/Cloudreve/releases</a></li>
+<li>安装文档：<a href="https://docs.cloudreve.org/getting-started/install" target="_blank" rel="noopener">https://docs.cloudreve.org/getting-started/install</a></li>
+<li>演示：<a href="https://demo.cloudreve.org" target="_blank" rel="noopener">https://demo.cloudreve.org</a></li>
+</ul>
+<h4 id="2、宝塔命令行输入代码查询内核参数"><a href="#2、宝塔命令行输入代码查询内核参数" class="headerlink" title="2、宝塔命令行输入代码查询内核参数"></a>2、宝塔命令行输入代码查询内核参数</h4><pre><code>arch</code></pre><p>输出结果x86_64代表amd64；aarch64代表arm64</p>
+<p><img src="pic/2020/05/%E5%AE%9D%E5%A1%94linux%E5%AE%89%E8%A3%85%E7%95%8C%E9%9D%A2.png" alt="宝塔linux安装界面"></p>
+<h4 id="3、下载链接处找到对应的版本-复制链接地址"><a href="#3、下载链接处找到对应的版本-复制链接地址" class="headerlink" title="3、下载链接处找到对应的版本,复制链接地址"></a>3、下载链接处找到对应的版本,复制链接地址</h4><p><img src="pic/2020/05/%E5%AE%9D%E5%A1%94linux%E4%B8%8B%E8%BD%BD%E7%95%8C%E9%9D%A2.png" alt="宝塔linux下载界面"></p>
+<h4 id="4、宝塔安全添加5212端口"><a href="#4、宝塔安全添加5212端口" class="headerlink" title="4、宝塔安全添加5212端口"></a>4、宝塔安全添加5212端口</h4><p><img src="pic/2020/05/%E5%AE%9D%E5%A1%94linux%E7%AB%AF%E5%8F%A3%E7%95%8C%E9%9D%A2.png" alt="宝塔linux端口设置界面"></p>
+<h4 id="5、宝塔命令行逐行执行以下命令，对应链接处改为自己复制的："><a href="#5、宝塔命令行逐行执行以下命令，对应链接处改为自己复制的：" class="headerlink" title="5、宝塔命令行逐行执行以下命令，对应链接处改为自己复制的："></a>5、宝塔命令行逐行执行以下命令，对应链接处改为自己复制的：</h4><h4 id="（当然你也可以把下边的改成自己的然后全部复制黏贴就完事了）"><a href="#（当然你也可以把下边的改成自己的然后全部复制黏贴就完事了）" class="headerlink" title="（当然你也可以把下边的改成自己的然后全部复制黏贴就完事了）"></a>（当然你也可以把下边的改成自己的然后全部复制黏贴就完事了）</h4><pre class=" language-linux"><code class="language-linux">mkdir /www/wwwroot/cloudreve # 新建一个文件夹存放程序
+cd /www/wwwroot/cloudreve # 进入该文件夹
+wget https://github.com/cloudreve/Cloudreve/releases/download/3.0.0/cloudreve_3.0.0_linux_amd64.tar.gz # 下载你复制的链接
+tar -zxvf cloudreve_3.0.0_linux_amd64.tar.gz # 解压获取到的主程序
+chmod +x ./cloudreve # 赋予执行权限
+./cloudreve # 启动 Cloudreve</code></pre>
+<h4 id="6、安装完成，保存账户和登录密码，务必保存该密码，测试登录"><a href="#6、安装完成，保存账户和登录密码，务必保存该密码，测试登录" class="headerlink" title="6、安装完成，保存账户和登录密码，务必保存该密码，测试登录"></a>6、安装完成，保存账户和登录密码，务必保存该密码，测试登录</h4><p>登录地址为服务器ip:5212，比如<a href="http://192.168.0.125:5212/" target="_blank" rel="noopener">http://192.168.0.125:5212/</a></p>
+<p><img src="pic/2020/05/%E4%BA%91%E7%9B%98%E7%99%BB%E5%BD%95%E7%95%8C%E9%9D%A2.png" alt="云盘登录界面"></p>
+<h4 id="7、想要无忧使用，最好是加个进程守护，这样就不需要每次都到后台启动进程"><a href="#7、想要无忧使用，最好是加个进程守护，这样就不需要每次都到后台启动进程" class="headerlink" title="7、想要无忧使用，最好是加个进程守护，这样就不需要每次都到后台启动进程"></a>7、想要无忧使用，最好是加个进程守护，这样就不需要每次都到后台启动进程</h4><p> 命令行端口ctrl+c，停止进程后关闭即可 </p>
+<p> 感谢宝塔能够安装Supervisor管理器 </p>
+<p><img src="pic/2020/05/%E5%AE%9D%E5%A1%94linux%E8%BF%9B%E7%A8%8B%E9%85%8D%E7%BD%AE.png" alt="宝塔linux进程配置"></p>
+<p>配置这样填：</p>
+<p><img src="pic/2020/05/%E5%AE%9D%E5%A1%94linux%E8%BF%9B%E7%A8%8B%E9%85%8D%E7%BD%AE%E7%95%8C%E9%9D%A2.png" alt="宝塔linux进程配置界面"></p>
+<p><strong>添加成功后，看下进程状态是否为开启的绿三角，假如不是就重启服务器，再回来看下，还不是就检查配置是否正确。</strong></p>
+<p><strong>搞到这里基本就能正常使用网盘了</strong></p>
 
             </div>
             <hr/>
@@ -517,7 +527,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://fei0511.github.io/2020/03/23/wu-ren-ji-kai-fa-zong-jie-03-wu-ren-ji-shu-ju-cai-ji/">http://fei0511.github.io/2020/03/23/wu-ren-ji-kai-fa-zong-jie-03-wu-ren-ji-shu-ju-cai-ji/</a>
+                    <a href="http://fei0511.github.io/2020/05/03/jing-yan-fen-xiang-08-tong-guo-cloudreve-zai-vps-shang-da-jian-si-ren-yun-pan/">http://fei0511.github.io/2020/05/03/jing-yan-fen-xiang-08-tong-guo-cloudreve-zai-vps-shang-da-jian-si-ren-yun-pan/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -555,8 +565,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA%E5%BC%80%E5%8F%91/">
-                                    <span class="chip bg-color">无人机开发</span>
+                                <a href="/tags/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/">
+                                    <span class="chip bg-color">常用工具</span>
                                 </a>
                             
                         </div>
@@ -985,45 +995,47 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/03/23/shu-mei-pai-kai-fa-zong-jie-01-ke-chuan-dai-shi-zhi-neng-she-bei/">
+                <a href="/2020/05/03/jing-yan-fen-xiang-08-tong-guo-cloudreve-zai-vps-shang-da-jian-si-ren-yun-pan/">
                     <div class="card-image">
                         
-                        <img src="https://pic.downk.cc/item/5e784f0c5c56091129753b1b.jpg" class="responsive-img" alt="[树莓派-开发总结01]-可穿戴式智能设备">
+                        <img src="https://pic.downk.cc/item/5eae9e49c2a9a83be5a52079.png" class="responsive-img" alt="[经验分享08]-通过Cloudreve在VPS上搭建私人云盘">
                         
-                        <span class="card-title">[树莓派-开发总结01]-可穿戴式智能设备</span>
+                        <span class="card-title">[经验分享08]-通过Cloudreve在VPS上搭建私人云盘</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            用树莓派制作一个智能可穿戴式设备
+                            搭建公私兼用的私人云盘
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-03-23
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-03
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%BC%80%E5%8F%91%E6%80%BB%E7%BB%93/" class="post-category">
-                                    开发总结
+                            <a href="/categories/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/" class="post-category">
+                                    经验分享
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%BC%80%E5%8F%91/">
-                        <span class="chip bg-color">树莓派开发</span>
+                    <a href="/tags/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/">
+                        <span class="chip bg-color">常用工具</span>
                     </a>
                     
                 </div>
@@ -1037,30 +1049,30 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/03/22/wu-ren-ji-kai-fa-zong-jie-02-duan-dao-duan-wu-ren-ji-kong-zhi-fang-fa-yan-jiu/">
+                <a href="/2020/04/27/jing-yan-fen-xiang-07-pei-zhi-v2ray-fu-wu-qi/">
                     <div class="card-image">
                         
-                        <img src="https://s1.ax1x.com/2020/03/23/8TJdZ8.jpg" class="responsive-img" alt="[无人机-开发总结02]-端到端无人机控制方法研究">
+                        <img src="https://pic.downk.cc/item/5ea6c974c2a9a83be5aa8922.png" class="responsive-img" alt="[经验分享07]-配置V2ray服务器">
                         
-                        <span class="card-title">[无人机-开发总结02]-端到端无人机控制方法研究</span>
+                        <span class="card-title">[经验分享07]-配置V2ray服务器</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            端到端无人机控制方法研究-[路径规划网络、pid控制器网络]
+                            V2ray科学上网工具
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-22
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-27
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%BC%80%E5%8F%91%E6%80%BB%E7%BB%93/" class="post-category">
-                                    开发总结
+                            <a href="/categories/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/" class="post-category">
+                                    经验分享
                                 </a>
                             
                             
@@ -1070,8 +1082,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA%E5%BC%80%E5%8F%91/">
-                        <span class="chip bg-color">无人机开发</span>
+                    <a href="/tags/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/">
+                        <span class="chip bg-color">常用工具</span>
                     </a>
                     
                 </div>
